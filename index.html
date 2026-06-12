@@ -10,9 +10,20 @@
 <meta property="og:type" content="website">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C6B4D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23F6F5EF' text-anchor='middle'%3EKH%3C/text%3E%3C/svg%3E">
 
-<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
+<!-- Google Analytics 4: paste your real Measurement ID on the next line to activate -->
+<script>
+window.GA4_ID = 'G-XXXXXXXXXX';
+window.dataLayer = window.dataLayer || [];
+function gtag(){ dataLayer.push(arguments); }
+if (window.GA4_ID && window.GA4_ID.indexOf('XXXX') === -1){
+  var gaScript = document.createElement('script');
+  gaScript.async = true;
+  gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.GA4_ID;
+  document.head.appendChild(gaScript);
+  gtag('js', new Date());
+  gtag('config', window.GA4_ID);
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -445,6 +456,15 @@ body{transition:background-color .9s ease}
 .svc-banner .btn-solid{background:var(--emerald);color:#0F1713;position:relative;z-index:1}
 .svc-banner .btn-solid:hover{background:var(--gold)}
 
+/* ================= BUGFIX & SAFETY ================= */
+html{overflow-x:hidden}
+.sheet{overscroll-behavior:contain}
+.orbit,.side-rail,.scroll-cue,.marquee.m2,#particles{pointer-events:none}
+html.lite .grain{display:none}
+html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none!important}
+.form-err{display:none;margin-top:12px;font-size:12.5px;color:#B3471F;background:#FBEDE6;border:1px solid #F0CDBA;border-radius:10px;padding:10px 13px;line-height:1.5}
+.form-err a{text-decoration:underline;font-weight:600}
+
 /* ================= DENSITY & STRUCTURE ================= */
 .section{padding:112px 0 26px}
 .sec-title{margin-bottom:38px}
@@ -654,7 +674,7 @@ body{transition:background-color .9s ease}
       <div class="rv">
         <p class="about-big">Systems, operations &amp; <span class="hl">project management</span> — I rebuild how work flows, run the delivery, and <span class="hl">measure everything</span>.</p>
         <div class="about-chips">
-          <span class="chip" data-cursor>Systems thinker</span><span class="chip" data-cursor>Automation</span><span class="chip" data-cursor>Project management</span><span class="chip" data-cursor>Data-driven</span><span class="chip" data-cursor>Cross-functional</span><span class="chip" data-cursor>Lean Six Sigma</span><span class="chip" data-cursor>MSc Liverpool</span><span class="chip" data-cursor>Dubai · UAE</span>
+          <span class="chip">Systems thinker</span><span class="chip">Automation</span><span class="chip">Project management</span><span class="chip">Data-driven</span><span class="chip">Cross-functional</span><span class="chip">Lean Six Sigma</span><span class="chip">MSc Liverpool</span><span class="chip">Dubai · UAE</span>
         </div>
       </div>
       <div class="about-side rv" style="--d:.15s">
@@ -674,44 +694,44 @@ body{transition:background-color .9s ease}
     <div class="sec-tag rv">03 / Freelance services</div>
     <h2 class="sec-title rv">What I build <span class="accent">for clients.</span></h2>
     <div class="svc-grid">
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">01</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="15" rx="2"/><path d="M3 8.5h18M6 6.3h.01M8.5 6.3h.01"/></svg></div>
         <h3>Website Design</h3>
         <p>Fast, modern sites that convert — design to deploy.</p>
       </div>
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">02</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div>
         <h3>App Development</h3>
         <p>Web &amp; mobile apps — from idea to launch.</p>
       </div>
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">03</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M11 3l1.7 4.3 4.3 1.7-4.3 1.7L11 15l-1.7-4.3L5 9l4.3-1.7z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></div>
         <h3>AI Automation</h3>
         <p>Workflows that run themselves — AI inside your operations.</p>
       </div>
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">04</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M4 20v-9M10 20V4M16 20v-6M21 20H3"/></svg></div>
         <h3>Reporting</h3>
         <p>Automated reports your team actually reads.</p>
       </div>
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">05</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M8.8 13v-2.4M11 13V8.6M13.2 13v-3.6"/></svg></div>
         <h3>BI Tools</h3>
         <p>Power BI models, DAX, dashboards — decision-ready data.</p>
       </div>
-      <div class="svc asm-item" data-cursor>
+      <div class="svc asm-item">
         <div class="svc-num">06</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M9 12.5l2 2 4-4.5"/></svg></div>
         <h3>Project Management</h3>
         <p>Planning to delivery — scope, timelines, execution.</p>
       </div>
     </div>
-    <div class="svc-banner rv" data-cursor>
+    <div class="svc-banner rv">
       <div>
         <h3>ERP &amp; Process Setup</h3>
         <p>Systems, inventory &amp; finance flows that scale with you.</p>
@@ -823,16 +843,16 @@ body{transition:background-color .9s ease}
     <div class="sec-tag rv">06 / Capabilities</div>
     <h2 class="sec-title rv">What I'm <span class="accent">built on.</span></h2>
     <div class="skill-rows">
-      <div class="srow rv" style="--lv:92%" data-cursor><span class="srow-idx">01</span><span class="srow-name">Business Process Analysis <span class="core">Core</span></span><span class="srow-num"><span data-count="92">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:90%" data-cursor><span class="srow-idx">02</span><span class="srow-name">Operations Management <span class="core">Core</span></span><span class="srow-num"><span data-count="90">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%" data-cursor><span class="srow-idx">03</span><span class="srow-name">Data Analysis &amp; Reporting <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%" data-cursor><span class="srow-idx">04</span><span class="srow-name">Project Management <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%" data-cursor><span class="srow-idx">05</span><span class="srow-name">Stakeholder Communication</span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:86%" data-cursor><span class="srow-idx">06</span><span class="srow-name">Power BI &amp; DAX <span class="core">Core</span></span><span class="srow-num"><span data-count="86">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:82%" data-cursor><span class="srow-idx">07</span><span class="srow-name">ERP &amp; CRM Systems <span class="core">Core</span></span><span class="srow-num"><span data-count="82">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:80%" data-cursor><span class="srow-idx">08</span><span class="srow-name">Automation &amp; AI Workflows <span class="core">Core</span></span><span class="srow-num"><span data-count="80">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:92%"><span class="srow-idx">01</span><span class="srow-name">Business Process Analysis <span class="core">Core</span></span><span class="srow-num"><span data-count="92">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:90%"><span class="srow-idx">02</span><span class="srow-name">Operations Management <span class="core">Core</span></span><span class="srow-num"><span data-count="90">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:88%"><span class="srow-idx">03</span><span class="srow-name">Data Analysis &amp; Reporting <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:88%"><span class="srow-idx">04</span><span class="srow-name">Project Management <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:88%"><span class="srow-idx">05</span><span class="srow-name">Stakeholder Communication</span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:86%"><span class="srow-idx">06</span><span class="srow-name">Power BI &amp; DAX <span class="core">Core</span></span><span class="srow-num"><span data-count="86">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:82%"><span class="srow-idx">07</span><span class="srow-name">ERP &amp; CRM Systems <span class="core">Core</span></span><span class="srow-num"><span data-count="82">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:80%"><span class="srow-idx">08</span><span class="srow-name">Automation &amp; AI Workflows <span class="core">Core</span></span><span class="srow-num"><span data-count="80">0</span><small>%</small></span></div>
     </div>
-    <div class="skill-note rv">+ Python · Java · GA4 · Supply chain · Inventory · Negotiation · Leadership — full stack scrolling above</div>
+    <div class="skill-note rv">+ Python · Java · GA4 · Supply chain · Inventory · Negotiation · Leadership</div>
   </div>
 </section>
 
@@ -843,13 +863,13 @@ body{transition:background-color .9s ease}
     <div class="sec-tag rv">07 / Credentials</div>
     <h2 class="sec-title rv">Education &amp; <span class="accent">certifications.</span></h2>
     <div class="edu-grid">
-      <article class="edu rv" data-cursor>
+      <article class="edu rv">
         <div class="edu-yr"><span>2022 — 2023 · United Kingdom</span><b>2:1 Honours</b></div>
         <h3>MSc Management</h3>
         <div class="edu-inst">University of Liverpool</div>
         <div class="edu-chips"><span class="chip">Project Management</span><span class="chip">Supply Chain</span><span class="chip">World #44</span><span class="chip">Triple Crown</span></div>
       </article>
-      <article class="edu rv" style="--d:.1s" data-cursor>
+      <article class="edu rv" style="--d:.1s">
         <div class="edu-yr"><span>2019 — 2022 · India</span><b>8.72 CGPA</b></div>
         <h3>BSc Information Technology</h3>
         <div class="edu-inst">Jai Hind College</div>
@@ -857,14 +877,14 @@ body{transition:background-color .9s ease}
       </article>
     </div>
     <div class="cert-cloud rv">
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lean Six Sigma White Belt</span>
-      <span class="cert prog" data-cursor><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Yellow Belt <small>· 60%</small></span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Negotiation <small>· UMichigan</small></span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Social Psychology <small>· Wesleyan</small></span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Google Analytics 4</span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Python Bootcamp <small>· Udemy</small></span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Java <small>· NIIT</small></span>
-      <span class="cert" data-cursor><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Operating Systems <small>· NPTEL</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lean Six Sigma White Belt</span>
+      <span class="cert prog"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Yellow Belt <small>· 60%</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Negotiation <small>· UMichigan</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Social Psychology <small>· Wesleyan</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Google Analytics 4</span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Python Bootcamp <small>· Udemy</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Java <small>· NIIT</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Operating Systems <small>· NPTEL</small></span>
     </div>
   </div>
 </section>
@@ -876,37 +896,37 @@ body{transition:background-color .9s ease}
     <div class="sec-tag rv">08 / Beyond work</div>
     <h2 class="sec-title rv">Fuel for the <span class="accent">thinking.</span></h2>
     <div class="hob-grid">
-      <div class="hob rv tilt" data-cursor>
+      <div class="hob rv tilt">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2"/><circle cx="18" cy="6" r="2.2"/><circle cx="12" cy="13" r="2.2"/><circle cx="6" cy="19" r="2.2"/><circle cx="18" cy="19" r="2.2"/><path d="M7.8 7.4l2.6 3.8M16.2 7.4l-2.6 3.8M10.6 14.6l-3 3M13.4 14.6l3 3"/></svg></div>
         <h3>Psychology &amp; Behaviour</h3>
         <div class="hob-chips"><span>Social psych</span><span>Decision making</span><span>Team dynamics</span></div>
       </div>
-      <div class="hob rv tilt" style="--d:.07s" data-cursor>
+      <div class="hob rv tilt" style="--d:.07s">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-8"/><path d="M15 7h5v5"/></svg></div>
         <h3>Startups &amp; Markets</h3>
         <div class="hob-chips"><span>Market analysis</span><span>Business models</span><span>Growth</span></div>
       </div>
-      <div class="hob rv tilt" style="--d:.14s" data-cursor>
+      <div class="hob rv tilt" style="--d:.14s">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><path d="M15.5 8.5L13 13l-4.5 2.5L11 11z"/></svg></div>
         <h3>One Piece &amp; Anime</h3>
         <div class="hob-chips"><span>1,000+ episodes</span><span>Strategy</span><span>Crew building</span></div>
       </div>
-      <div class="hob rv tilt" data-cursor>
+      <div class="hob rv tilt">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><path d="M7 16a4.5 4.5 0 0 1-4-6.4L4.6 6A3.5 3.5 0 0 1 8 4h8a3.5 3.5 0 0 1 3.4 2l1.6 3.6A4.5 4.5 0 0 1 17 16c-1.6 0-2.6-.9-3.3-1.8h-3.4C9.6 15.1 8.6 16 7 16z"/><path d="M7.5 8v4M5.5 10h4M16 8.6h.01M18 10.6h.01"/></svg></div>
         <h3>PC &amp; PS5 Gaming</h3>
         <div class="hob-chips"><span>Open world</span><span>Competitive</span><span>Strategy</span></div>
       </div>
-      <div class="hob rv tilt" style="--d:.07s" data-cursor>
+      <div class="hob rv tilt" style="--d:.07s">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/><path d="M17 6.5v4M17 10.5h-3M6.5 10v7.5H14"/></svg></div>
         <h3>Systems &amp; Process Design</h3>
         <div class="hob-chips"><span>Chaos → clarity</span><span>10 steps → 2 clicks</span></div>
       </div>
-      <div class="hob dark rv tilt" style="--d:.14s" data-cursor>
+      <div class="hob dark rv tilt" style="--d:.14s">
         <div class="glare"></div>
         <div class="hob-ic"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 7a5.2 5.2 0 0 1 9.2 5c-2.2 4.4-9.2 9-9.2 9z"/></svg></div>
         <h3>Community</h3>
@@ -964,6 +984,7 @@ body{transition:background-color .9s ease}
           </div>
           <div class="field"><label for="fMsg">Message</label><textarea id="fMsg" rows="3" placeholder="A role, a project, or feedback…"></textarea></div>
           <button class="submit-btn magnetic" type="submit" data-cursor>Send message</button>
+          <div class="form-err" id="formErr">Couldn't send right now — <a href="https://wa.me/971509660624" target="_blank" rel="noopener noreferrer">message me on WhatsApp</a> instead.</div>
         </form>
         <div class="form-success" id="formSuccess">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12.5l2.6 2.6L16 9.5"/></svg>
@@ -1148,6 +1169,7 @@ if (finePointer && !reduced){
   });
   hero.addEventListener('mouseleave', function(){ pmx=-9999; pmy=-9999; });
   function step(){
+    if (window.__lite){ running = false; return; }
     ctx.clearRect(0,0,W,H);
     for (var i=0;i<P.length;i++){
       var p = P[i];
@@ -1284,6 +1306,7 @@ var BGMAP = {top:'#F6F5EF',impact:'#F3F5EF',about:'#F7F4EC',services:'#F1F4EF',e
 var navProgress = $('#navProgress');
 var spies = $$('[data-spy]');
 function onScroll(){
+  if (window.__locked) return;
   var h = document.documentElement;
   var max = h.scrollHeight - h.clientHeight;
   navProgress.style.width = (max>0 ? h.scrollTop/max*100 : 0) + '%';
@@ -1324,6 +1347,26 @@ var PROJECTS = {
     chips:['Accuracy 85–90%','132 → 30–35 recs','100% approvals','Wastage visible']}
 };
 var overlay = $('#overlay');
+var lockY = 0, lastFocus = null;
+window.__locked = false;
+function lockBody(){
+  window.__locked = true;
+  if (window.__smoothScroll){ document.body.style.overflow = 'hidden'; return; }
+  lockY = window.scrollY || 0;
+  document.body.style.position = 'fixed';
+  document.body.style.top = (-lockY) + 'px';
+  document.body.style.left = '0'; document.body.style.right = '0';
+  document.body.style.width = '100%';
+  document.body.style.overflow = 'hidden';
+}
+function unlockBody(){
+  window.__locked = false;
+  if (window.__smoothScroll){ document.body.style.overflow = ''; return; }
+  document.body.style.position = ''; document.body.style.top = '';
+  document.body.style.left = ''; document.body.style.right = '';
+  document.body.style.width = ''; document.body.style.overflow = '';
+  window.scrollTo(0, lockY);
+}
 function openSheet(cfg){
   $('#shCat').textContent = cfg.cat;
   $('#shTitle').textContent = cfg.title;
@@ -1337,14 +1380,21 @@ function openSheet(cfg){
   var ch = $('#shChips'); ch.innerHTML = '';
   (cfg.chips || []).forEach(function(c){ var sp = document.createElement('span'); sp.className='chip'; sp.textContent = c; ch.appendChild(sp); });
   overlay.classList.add('open');
-  document.body.style.overflow = 'hidden';
+  lockBody();
+  lastFocus = document.activeElement;
+  setTimeout(function(){ var c = $('#sheetClose'); if (c) c.focus(); }, 80);
   if (typeof gtag==='function') gtag('event', cfg.ev || 'sheet_open', {id: cfg.id || ''});
 }
 function openProj(id){
   var p = PROJECTS[id]; if (!p) return;
   openSheet({cat:p.cat, title:p.title, org:p.org, chal:p.chal, sol:p.sol, chips:p.chips, ev:'project_open', id:id});
 }
-function closeProj(){ overlay.classList.remove('open'); document.body.style.overflow=''; }
+function closeProj(){
+  overlay.classList.remove('open');
+  unlockBody();
+  if (lastFocus && lastFocus.focus){ try{ lastFocus.focus(); }catch(err){} }
+  lastFocus = null;
+}
 $$('.proj').forEach(function(card){
   card.addEventListener('click', function(){ openProj(card.getAttribute('data-proj')); });
   card.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openProj(card.getAttribute('data-proj')); } });
@@ -1352,6 +1402,14 @@ $$('.proj').forEach(function(card){
 $('#sheetClose').addEventListener('click', closeProj);
 overlay.addEventListener('click', function(e){ if (e.target === overlay) closeProj(); });
 addEventListener('keydown', function(e){ if (e.key==='Escape') closeProj(); });
+overlay.addEventListener('keydown', function(e){
+  if (e.key !== 'Tab' || !overlay.classList.contains('open')) return;
+  var f = overlay.querySelectorAll('button, a[href], input, textarea, [tabindex]:not([tabindex="-1"])');
+  if (!f.length) return;
+  var first = f[0], last = f[f.length - 1];
+  if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+  else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+});
 
 /* ---------- Clickable roles: details sheets ---------- */
 var ROLES = {
@@ -1404,14 +1462,23 @@ $('#feedbackForm').addEventListener('submit', function(e){
   e.preventDefault();
   var name = $('#fName').value.trim(), email = $('#fEmail').value.trim();
   if (!name || !email || !rating){ alert('Please fill in your name, email and a rating.'); return; }
+  var sb = $('.submit-btn'), errEl = $('#formErr');
+  sb.disabled = true; var prev = sb.textContent; sb.textContent = 'Sending\u2026';
+  if (errEl) errEl.style.display = 'none';
   var fd = new FormData();
   fd.append('name', name); fd.append('email', email);
   fd.append('message', $('#fMsg').value.trim() || 'No message provided');
   fd.append('rating', rating);
-  fetch('https://script.google.com/macros/s/AKfycbwUE6sf7gnrn_LTsYi932Zq41aPvYUEoEuSnVBzWTyIqzG_6AaUi8aH12HBQ3cxJQ9cMw/exec',{method:'POST',body:fd,mode:'no-cors'}).catch(function(){});
-  $('#feedbackForm').style.display = 'none';
-  $('#formSuccess').style.display = 'block';
-  if (typeof gtag==='function') gtag('event','feedback_submit',{rating:rating});
+  fetch('https://script.google.com/macros/s/AKfycbwUE6sf7gnrn_LTsYi932Zq41aPvYUEoEuSnVBzWTyIqzG_6AaUi8aH12HBQ3cxJQ9cMw/exec',{method:'POST',body:fd,mode:'no-cors'})
+    .then(function(){
+      $('#feedbackForm').style.display = 'none';
+      $('#formSuccess').style.display = 'block';
+      if (typeof gtag==='function') gtag('event','feedback_submit',{rating:rating});
+    })
+    .catch(function(){
+      sb.disabled = false; sb.textContent = prev;
+      if (errEl) errEl.style.display = 'block';
+    });
 });
 /* ---------- Section title word reveal ---------- */
 $$('.sec-title').forEach(function(t){
@@ -1454,6 +1521,7 @@ $$('.sec-title').forEach(function(t){
   addEventListener('resize', function(){ tracks.forEach(function(tr){ tr.half = tr.el.scrollWidth/2; }); });
 
   var smoothActive = finePointer && !reduced && innerWidth > 900;
+  window.__smoothScroll = smoothActive;
   var mainEl = document.querySelector('main');
   var spacer = null, cur = scrollY, lastY = scrollY, vel = 0, sk = 0;
   function sizeSpacer(){ if (spacer) spacer.style.height = mainEl.offsetHeight + 'px'; }
@@ -1467,20 +1535,26 @@ $$('.sec-title').forEach(function(t){
     addEventListener('resize', sizeSpacer);
     addEventListener('load', sizeSpacer);
     setTimeout(sizeSpacer, 600); setTimeout(sizeSpacer, 1600);
+    if (window.ResizeObserver){ new ResizeObserver(sizeSpacer).observe(mainEl); }
   }
   var heroWrap = $('.hero .wrap');
+  var fpsT = performance.now(), fpsN = 0, fpsDone = false;
   function loop(){
+    if (window.__locked){ requestAnimationFrame(loop); return; }
     var target = scrollY;
     vel = target - lastY; lastY = target;
     if (smoothActive){
       cur = lerp(cur, target, .1);
       if (Math.abs(cur - target) < .05) cur = target;
       sk = lerp(sk, Math.max(-1.1, Math.min(1.1, vel * .032)), .09);
+      if (window.__lite) sk = 0;
       mainEl.style.transform = 'translate3d(0,' + (-cur).toFixed(2) + 'px,0)' + (Math.abs(sk) > .02 ? ' skewY(' + sk.toFixed(3) + 'deg)' : '');
     } else { cur = target; }
     if (heroWrap && !reduced && cur < innerHeight * 1.3){
       heroWrap.style.transform = 'translate3d(0,' + (cur * .18) + 'px,0)';
-      heroWrap.style.opacity = Math.max(0, 1 - cur/720);
+      var hop = Math.max(0, 1 - cur/720);
+      heroWrap.style.opacity = hop;
+      heroWrap.style.pointerEvents = hop < .3 ? 'none' : '';
     }
     if (!reduced){
       var boost = Math.min(Math.abs(vel) * .12, 7);
@@ -1490,6 +1564,14 @@ $$('.sec-title').forEach(function(t){
         if (tr.x <= -tr.half) tr.x += tr.half;
         if (tr.x >= 0) tr.x -= tr.half;
         tr.el.style.transform = 'translate3d(' + tr.x.toFixed(2) + 'px,0,0)';
+      }
+    }
+    if (!fpsDone){
+      fpsN++;
+      var fpsEl = performance.now() - fpsT;
+      if (fpsEl > 2200){
+        fpsDone = true;
+        if (fpsN / (fpsEl / 1000) < 42){ document.documentElement.classList.add('lite'); window.__lite = true; }
       }
     }
     var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
@@ -1583,20 +1665,27 @@ function finalizeName(){
   function smooth(t){ return t*t*(3-2*t); }
   function asmUpdate(){
     var vh = innerHeight;
+    var sY = window.scrollY || 0;
+    var roomBelow = document.documentElement.scrollHeight - (sY + vh);
+    var endBoost = 1 - Math.min(Math.max(roomBelow/(vh*.35), 0), 1);
+    var topBoost = 1 - Math.min(Math.max(sY/(vh*.35), 0), 1);
     for (var i=0; i<items.length; i++){
       var it = items[i];
       var c = it.o.getBoundingClientRect().top + it.h/2;
       if (c < -360 || c > vh + 360) continue;
-      var pIn  = Math.min(Math.max((vh*1.05 - c)/(vh*.25), 0), 1);
-      var pOut = Math.min(Math.max((c - vh*.04)/(vh*.18), 0), 1);
+      var pIn  = Math.min(Math.max((vh*1.08 - c)/(vh*.20), 0), 1);
+      var pOut = Math.min(Math.max((c - vh*.02)/(vh*.10), 0), 1);
+      if (endBoost > 0) pIn = Math.max(pIn, endBoost);
+      if (topBoost > 0) pOut = Math.max(pOut, topBoost);
       var f = 1 - smooth(Math.min(pIn, pOut));
       var dir = c > vh*.5 ? 1 : -1;
       if (f < .006){
-        if (it.ctl){ it.n.style.transform=''; it.n.style.opacity=''; it.ctl=false; }
+        if (it.ctl){ it.n.style.transform=''; it.n.style.opacity=''; it.n.style.pointerEvents=''; it.ctl=false; }
       } else if (f > .02 || it.ctl){
         it.ctl = true;
         it.n.style.transform = 'translate3d(' + (it.x*f*dir).toFixed(2) + 'px,' + (it.y*f).toFixed(2) + 'px,0) rotate(' + (it.r*f*dir).toFixed(2) + 'deg)';
         it.n.style.opacity = Math.max(0, 1 - f*1.05).toFixed(3);
+        it.n.style.pointerEvents = f > .25 ? 'none' : '';
       }
     }
     requestAnimationFrame(asmUpdate);
