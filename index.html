@@ -84,6 +84,9 @@ ul{list-style:none}
 .nav-links a:hover,.nav-links a.active{color:var(--ink);background:rgba(12,107,77,.08)}
 .nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:#F6F5EF;padding:10px 18px;border-radius:50px;display:inline-block;transition:background .3s}
 .nav-cta:hover{background:var(--green)}
+.nav-cv{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);border:1.5px solid var(--line);padding:8px 14px;border-radius:50px;transition:border-color .3s,background .3s,transform .3s var(--easeOut)}
+.nav-cv svg{width:13px;height:13px}
+.nav-cv:hover{border-color:var(--green);background:var(--mint)}
 .nav-progress{position:absolute;left:0;bottom:-1px;height:2px;background:linear-gradient(90deg,var(--green),var(--gold));width:0%}
 .menu-btn{display:none;width:42px;height:42px;border-radius:11px;border:1px solid var(--line);background:var(--card);place-items:center}
 .menu-btn svg{width:18px;height:18px;stroke:var(--ink);stroke-width:2;stroke-linecap:round}
@@ -145,6 +148,8 @@ ul{list-style:none}
 .btn-solid:hover{background:var(--green)}
 .btn-ghost{border:1.5px solid var(--line);background:rgba(255,255,255,.6)}
 .btn-ghost:hover{border-color:var(--green);color:var(--green)}
+.btn-cv{background:var(--gold);color:#1a1205}
+.btn-cv:hover{background:var(--ink);color:#F6F5EF}
 .hero-stats{display:flex;gap:clamp(26px,5vw,64px);margin-top:64px;padding:26px 0;border-top:1px solid var(--line);flex-wrap:wrap}
 .hs .n{font-family:var(--display);font-weight:800;font-variation-settings:'wdth' 115;font-size:clamp(30px,4.6vw,48px);line-height:1;letter-spacing:-.02em}
 .hs .n em{font-style:normal;color:var(--green)}
@@ -302,6 +307,12 @@ ul{list-style:none}
 .c-links{display:flex;flex-direction:column;gap:12px}
 .c-link{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px;transition:all .35s var(--easeOut)}
 .c-link:hover{transform:translateX(8px);border-color:var(--green)}
+.c-link-cv{background:linear-gradient(100deg,#FBF4E4,var(--card));border-color:#EAD9AE}
+.c-link-cv .c-ic{background:#F4E6C4}
+.c-link-cv .c-ic svg{stroke:var(--gold)}
+.c-link-cv:hover{border-color:var(--gold);transform:translateX(8px)}
+.c-link-cv:hover .c-go{background:var(--gold);border-color:var(--gold)}
+.c-link-cv:hover .c-go svg{stroke:#1a1205;transform:translateY(2px) rotate(0deg)}
 .c-ic{width:46px;height:46px;border-radius:13px;background:var(--mint);display:grid;place-items:center;flex:none}
 .c-ic svg{width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .c-k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
@@ -501,7 +512,8 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
   .hero-roles{font-size:11px;letter-spacing:.12em;min-height:34px}
   .hero-line{font-size:14.5px;margin-bottom:28px}
   .hero-cta{gap:10px}
-  .btn{padding:13px 18px;font-size:11px;flex:1;justify-content:center;min-width:46%}
+  .btn{padding:13px 16px;font-size:11px;flex:1;justify-content:center;min-width:44%}
+  .nav-cv{display:none}
   .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:20px 14px;margin-top:44px;padding:22px 0}
   .hs .n{font-size:27px}
   .ghost{font-size:clamp(44px,15vw,80px);top:26px;-webkit-text-stroke:1px rgba(15,23,19,.08)}
@@ -587,12 +599,13 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       <a href="#education" data-spy="education" data-cursor>Education</a>
       <a href="#beyond" data-spy="beyond" data-cursor>Beyond</a>
     </div>
+    <a class="nav-cv magnetic" data-cv data-cursor aria-label="Download CV"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg>CV</a>
     <a class="nav-cta magnetic" href="#contact" data-cursor>Let's talk</a>
     <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
     <div class="mm-in">
-      <a href="#impact">Impact</a><a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#beyond">Beyond</a><a href="#contact">Let's talk</a>
+      <a href="#impact">Impact</a><a href="#about">About</a><a href="#services">Services</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#beyond">Beyond</a><a href="#contact">Let's talk</a><a data-cv style="color:var(--gold)">Download CV ↓</a>
     </div>
   </div>
   <div class="nav-progress" id="navProgress"></div>
@@ -633,6 +646,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <div class="hero-cta">
       <a class="btn btn-solid magnetic" href="#projects" data-cursor>See the work <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost magnetic" href="#contact" data-cursor>Get in touch <svg viewBox="0 0 24 24"><path d="M4 6l8 6 8-6M4 6h16v12H4z"/></svg></a>
+      <a class="btn btn-cv magnetic" data-cv data-cursor>Download CV <svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg></a>
     </div>
     <div class="hero-stats">
       <div class="hs rv"><div class="n"><span data-count="3" id="expYears">0</span><em>+</em></div><div class="l">Years experience</div></div>
@@ -946,6 +960,11 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     </div>
     <div class="contact-grid">
       <div class="c-links rv">
+        <a class="c-link c-link-cv magnetic" data-cv data-cursor>
+          <span class="c-ic"><svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg></span>
+          <span><span class="c-k">Curriculum Vitae</span><br><span class="c-v">Download my CV (PDF)</span></span>
+          <span class="c-go"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg></span>
+        </a>
         <a class="c-link magnetic" href="mailto:kartiksinghushare@gmail.com" data-cursor>
           <span class="c-ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
           <span><span class="c-k">Email</span><br><span class="c-v">kartiksinghushare@gmail.com</span></span>
@@ -1031,9 +1050,19 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 "use strict";
 var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 var finePointer = window.matchMedia('(pointer: fine)').matches;
+/* === Your CV download link. Replace with your own URL anytime (e.g. /kartik-cv.pdf hosted on your domain). Drive file must be shared as "Anyone with the link". === */
+var CV_URL = 'https://drive.google.com/uc?export=download&id=1gm1RKRDGoI3xTwyTTTBfGC6en1JpmVf8';
 function $(s,c){return (c||document).querySelector(s)}
 function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
 function lerp(a,b,t){return a+(b-a)*t}
+
+/* ---------- Wire CV links ---------- */
+$$('[data-cv]').forEach(function(a){
+  a.setAttribute('href', CV_URL);
+  a.setAttribute('target','_blank');
+  a.setAttribute('rel','noopener noreferrer');
+  a.addEventListener('click', function(){ if (typeof gtag==='function') gtag('event','cv_download'); });
+});
 
 /* ---------- Year + experience + Dubai clock ---------- */
 $('#year').textContent = new Date().getFullYear();
