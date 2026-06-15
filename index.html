@@ -553,7 +553,11 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 }
 @media(max-width:380px){.hero h1{font-size:39px}}
 
-/* ================= REDUCED MOTION ================= */
+/* ================= REDUCED MOTION =================
+   Disabled so the site still animates when iOS Low Power Mode or the
+   Reduce Motion accessibility setting forces prefers-reduced-motion.
+   To restore the accessible (no-animation) behavior, delete the opening
+   and closing comment markers around the @media block below.
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
@@ -563,6 +567,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
   .flip .old,.flip .new{opacity:1;transform:none}
   .srow::before{width:var(--lv)}
 }
+*/
 </style>
 </head>
 <body>
@@ -1047,7 +1052,9 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <script>
 (function(){
 "use strict";
-var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var reduced = false; /* was: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+   Forced to false so animations run on iPhone even under Low Power Mode / Reduce Motion.
+   To restore accessible (no-animation) behavior, put the matchMedia line back. */
 var finePointer = window.matchMedia('(pointer: fine)').matches;
 /* === Your CV download link. Replace with your own URL anytime (e.g. /kartik-cv.pdf hosted on your domain). Drive file must be shared as "Anyone with the link". === */
 var CV_URL = 'https://drive.google.com/uc?export=download&id=1gm1RKRDGoI3xTwyTTTBfGC6en1JpmVf8';
