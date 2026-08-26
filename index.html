@@ -3,11 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-<title>Kartik Hushare — Systems · Operations · Management</title>
-<meta name="description" content="Kartik Hushare — Business Process & Systems Analyst in Dubai and founder of Evarca, a people & operations SaaS. Freelance websites, apps, AI automation, reporting & BI tools.">
-<meta property="og:title" content="Kartik Hushare — Systems · Operations · Founder of Evarca">
-<meta property="og:description" content="I make slow operations fast. Founder of Evarca — a people & operations SaaS. ERP, automation, analytics — Dubai, UAE.">
+<title>Kartik Hushare — Business Process & Systems Analyst · Dubai</title>
+<meta name="description" content="Kartik Hushare — Business Process & Systems Analyst in Dubai. Built Bridge (OKRs, tasks & internal comms in one workspace, replacing 3 tools), a full F&B bakery ERP, and Evarca — a people & operations SaaS. ERP, automation, Power BI.">
+<meta property="og:title" content="Kartik Hushare — Business Process & Systems Analyst · Dubai">
+<meta property="og:description" content="I make slow operations fast — and when software doesn't fit, I build it: Bridge, a bakery ERP and Evarca. ERP, automation, analytics — Dubai, UAE.">
 <meta property="og:type" content="website">
+<meta name="theme-color" content="#0C6B4D">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C6B4D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23F6F5EF' text-anchor='middle'%3EKH%3C/text%3E%3C/svg%3E">
 
 <!-- Google Analytics 4: paste your real Measurement ID on the next line to activate -->
@@ -28,6 +29,30 @@ if (window.GA4_ID && window.GA4_ID.indexOf('XXXX') === -1){
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured data so Google/LinkedIn previews show the right person & role -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Kartik Hushare",
+  "alternateName": "Kartiksingh Hushare",
+  "jobTitle": "Business Process & Systems Analyst",
+  "worksFor": {"@type": "Organization", "name": "BloomingBox"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE"},
+  "email": "mailto:kartiksinghushare@gmail.com",
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "University of Liverpool"},
+    {"@type": "CollegeOrUniversity", "name": "Jai Hind College"}
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/kartiksingh-hushare-1a6698251",
+    "https://www.instagram.com/kartikhushare",
+    "https://evarca.com"
+  ],
+  "knowsLanguage": ["English", "Hindi", "Marathi", "Marwari"]
+}
+</script>
 
 <style>
 /* ================= TOKENS ================= */
@@ -174,7 +199,7 @@ ul{list-style:none}
 .marquee.m2 .mq-item::after{background:var(--emerald)}
 
 /* ================= IMPACT FLIP TILES ================= */
-.impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .imp{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px 26px;position:relative;overflow:hidden;transition:transform .45s var(--easeOut),box-shadow .45s}
 .imp:hover{transform:translateY(-7px);box-shadow:0 24px 60px rgba(15,23,19,.13)}
 .imp::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--easeOut)}
@@ -229,6 +254,8 @@ ul{list-style:none}
 .proj{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:34px;position:relative;overflow:hidden;
   transform-style:preserve-3d;will-change:transform;transition:box-shadow .4s,border-color .4s;min-height:280px;display:flex;flex-direction:column}
 .proj:hover{box-shadow:0 30px 80px rgba(15,23,19,.16);border-color:#D5E4DC}
+.proj.wide{grid-column:1/-1}
+body:not(.cursor-on) .proj,body:not(.cursor-on) .xp{cursor:pointer}
 .proj .glare{position:absolute;inset:0;background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),rgba(17,160,107,.13),transparent 65%);opacity:0;transition:opacity .35s;pointer-events:none}
 .proj:hover .glare{opacity:1}
 .proj-top{display:flex;justify-content:space-between;gap:12px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:20px;transform:translateZ(30px);padding-right:48px}
@@ -701,7 +728,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       <div class="hs rv" style="--d:.1s"><div class="n"><em>&gt;</em><span data-count="97">0</span><em>%</em></div><div class="l">On-time delivery</div></div>
       <div class="hs rv" style="--d:.2s"><div class="n"><span data-count="500">0</span><em>+</em></div><div class="l">Daily orders run</div></div>
       <div class="hs rv" style="--d:.3s"><div class="n"><span data-count="87">0</span><em>%</em></div><div class="l">Stock accuracy</div></div>
-      <div class="hs rv" style="--d:.4s"><div class="n"><span data-count="8">0</span><em>+</em></div><div class="l">Evarca modules built</div></div>
+      <div class="hs rv" style="--d:.4s"><div class="n"><span data-count="3">0</span></div><div class="l">Platforms built solo</div></div>
     </div>
   </div>
   <div class="scroll-cue"><div class="wheel"><i></i></div>Scroll</div>
@@ -710,7 +737,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <!-- ============ MARQUEE 1 ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="mq-track" data-mq>
-    <span class="mq-item">Power BI</span><span class="mq-item">Advanced DAX</span><span class="mq-item">ERP Systems</span><span class="mq-item">SQL</span><span class="mq-item">Automation</span><span class="mq-item">Python</span><span class="mq-item">Excel</span><span class="mq-item">Lean Six Sigma</span><span class="mq-item">Management</span><span class="mq-item">CRM</span><span class="mq-item">AWS</span><span class="mq-item">GA4</span><span class="mq-item">Supply Chain</span><span class="mq-item">Inventory</span><span class="mq-item">Process Design</span><span class="mq-item">Barcoding</span>
+    <span class="mq-item">Power BI</span><span class="mq-item">Advanced DAX</span><span class="mq-item">ERP Systems</span><span class="mq-item">SQL</span><span class="mq-item">Automation</span><span class="mq-item">Python</span><span class="mq-item">Excel</span><span class="mq-item">Lean Six Sigma</span><span class="mq-item">Management</span><span class="mq-item">CRM</span><span class="mq-item">AWS</span><span class="mq-item">GA4</span><span class="mq-item">Supply Chain</span><span class="mq-item">F&amp;B ERP</span><span class="mq-item">OKRs</span><span class="mq-item">Inventory</span><span class="mq-item">Process Design</span><span class="mq-item">Barcoding</span>
   </div>
 </div>
 
@@ -721,10 +748,12 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <div class="sec-tag rv">01 / Before → after</div>
     <h2 class="sec-title rv">Numbers that <span class="accent">moved.</span></h2>
     <div class="impact-grid">
-      <div class="imp rv feature" data-flip><div class="imp-k">Order completion</div><div class="flip"><span class="old">10 min</span><span class="new">&lt;1 min</span></div><div class="imp-sub">Workflow redesign</div></div>
-      <div class="imp rv" style="--d:.08s" data-flip><div class="imp-k">Weekly reconciliations</div><div class="flip"><span class="old">132</span><span class="new">30–35</span></div><div class="imp-sub">Inventory system</div></div>
-      <div class="imp rv" style="--d:.16s" data-flip><div class="imp-k">Stock accuracy</div><div class="flip"><span class="old">~60%</span><span class="new">87%</span></div><div class="imp-sub">Validation rules</div></div>
+      <div class="imp rv feature" data-flip><div class="imp-k">OKR · task · comms tools</div><div class="flip"><span class="old">3 paid tools</span><span class="new">1 · Bridge</span></div><div class="imp-sub">Workspace I built solo</div></div>
+      <div class="imp rv" style="--d:.06s" data-flip><div class="imp-k">Order completion</div><div class="flip"><span class="old">10 min</span><span class="new">&lt;1 min</span></div><div class="imp-sub">Workflow redesign</div></div>
+      <div class="imp rv" style="--d:.12s" data-flip><div class="imp-k">Weekly reconciliations</div><div class="flip"><span class="old">132</span><span class="new">30–35</span></div><div class="imp-sub">Inventory system</div></div>
+      <div class="imp rv" style="--d:.18s" data-flip><div class="imp-k">Stock accuracy</div><div class="flip"><span class="old">~60%</span><span class="new">87%</span></div><div class="imp-sub">Validation rules</div></div>
       <div class="imp rv" style="--d:.24s" data-flip><div class="imp-k">COGS reduction</div><div class="flip"><span class="new">−2–3%</span></div><div class="imp-sub">Product-level costing</div></div>
+      <div class="imp rv" style="--d:.3s" data-flip><div class="imp-k">Bakery ERP · F&amp;B-first</div><div class="flip"><span class="new">0→1</span></div><div class="imp-sub">In-house bakery, from scratch</div></div>
     </div>
   </div>
 </section>
@@ -736,9 +765,9 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <div class="sec-tag rv">02 / Profile</div>
     <div class="about-strip">
       <div class="rv">
-        <p class="about-big">Systems, operations &amp; <span class="hl">management</span> — I rebuild how work flows, run the delivery, and <span class="hl">measure everything</span>.</p>
+        <p class="about-big">Systems, operations &amp; <span class="hl">management</span> — I rebuild how work flows, run the delivery, and <span class="hl">measure everything</span>. And when software doesn't fit, I <span class="hl">build my own</span> — Bridge, a bakery ERP and Evarca so far.</p>
         <div class="about-chips">
-          <span class="chip">Systems thinker</span><span class="chip">Automation</span><span class="chip">Management</span><span class="chip">Data-driven</span><span class="chip">Cross-functional</span><span class="chip">Lean Six Sigma</span><span class="chip">MSc Liverpool</span><span class="chip">Dubai · UAE</span>
+          <span class="chip">Systems thinker</span><span class="chip">Builds platforms solo</span><span class="chip">Automation</span><span class="chip">Management</span><span class="chip">Data-driven</span><span class="chip">Cross-functional</span><span class="chip">Lean Six Sigma</span><span class="chip">MSc Liverpool</span><span class="chip">Dubai · UAE</span>
         </div>
       </div>
       <div class="about-side rv" style="--d:.15s">
@@ -813,9 +842,9 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <h2 class="sec-title rv">Six roles. <span class="accent">Three countries.</span></h2>
     <div class="xp-list">
       <div class="xp rv" data-cursor>
-        <div class="xp-period">Nov 2024 — Now</div>
+        <div class="xp-period" id="xpNow">Nov 2024 — Now</div>
         <div><div class="xp-role">Business Process &amp; Systems Analyst</div><div class="xp-co"><b>BloomingBox</b> · Dubai</div></div>
-        <div class="xp-pills"><span class="pill">10 min <span class="arr">→</span> <b>&lt;1 min</b></span><span class="pill">132 <span class="arr">→</span> <b>30–35</b> recs</span><span class="pill">COGS <b>−2–3%</b></span><span class="pill"><b>Mercedes &amp; Netflix</b> ops</span></div>
+        <div class="xp-pills"><span class="pill">Bridge: 3 tools <span class="arr">→</span> <b>1</b></span><span class="pill">Bakery ERP <b>0→1</b></span><span class="pill">10 min <span class="arr">→</span> <b>&lt;1 min</b></span><span class="pill">COGS <b>−2–3%</b></span><span class="pill"><b>Mercedes &amp; Netflix</b> ops</span></div>
       </div>
       <div class="xp rv" data-cursor>
         <div class="xp-period">Jan — Nov 2024</div>
@@ -851,8 +880,17 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
   <div class="ghost" data-speed=".18">Work</div>
   <div class="wrap">
     <div class="sec-tag rv">05 / Case studies</div>
-    <h2 class="sec-title rv">Systems I <span class="accent">rebuilt.</span></h2>
+    <h2 class="sec-title rv">Built, rebuilt, <span class="accent">shipped.</span></h2>
     <div class="proj-grid">
+      <article class="proj rv tilt wide" data-proj="p5" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="glare"></div>
+        <div class="proj-top"><span class="proj-cat">Flagship platform · Built solo</span><span class="proj-period">2026 — Now</span></div>
+        <div class="proj-stat">3<small>→</small>1</div>
+        <h3>Bridge — One Workspace for OKRs, Tasks &amp; Comms</h3>
+        <p class="proj-one">Three paid tools replaced by one platform I designed and developed alone — all three modules live, still shipping upgrades.</p>
+        <div class="proj-chips"><span class="chip">OKRs</span><span class="chip">Task management</span><span class="chip">Internal comms</span><span class="chip">Licence costs cut</span><span class="chip">Continuously upgraded</span></div>
+        <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+      </article>
       <article class="proj rv tilt" data-proj="p1" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
         <div class="glare"></div>
         <div class="proj-top"><span class="proj-cat">Infrastructure</span><span class="proj-period">2024</span></div>
@@ -889,6 +927,15 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
         <div class="proj-chips"><span class="chip">Validations</span><span class="chip">100% approvals</span><span class="chip">Wastage tracked</span></div>
         <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
       </article>
+      <article class="proj rv tilt wide" data-proj="p6" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="glare"></div>
+        <div class="proj-top"><span class="proj-cat">ERP · New build</span><span class="proj-period">Late 2025 — 26</span></div>
+        <div class="proj-stat">F&amp;B<small>ERP</small></div>
+        <h3>Bakery ERP, Built From Scratch</h3>
+        <p class="proj-one">BloomingBox brought bakery in-house — so I developed it an entirely new ERP, designed from a food &amp; beverage point of view.</p>
+        <div class="proj-chips"><span class="chip">0→1 build</span><span class="chip">F&amp;B-first design</span><span class="chip">In-house bakery</span></div>
+        <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+      </article>
     </div>
   </div>
 </section>
@@ -896,7 +943,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <!-- ============ MARQUEE 2 ============ -->
 <div class="marquee m2" aria-hidden="true">
   <div class="mq-track" data-mq>
-    <span class="mq-item">Built Evarca — a live people &amp; ops SaaS</span><span class="mq-item">10 min &#8594; &lt;1 min completion</span><span class="mq-item">Zero-downtime migration</span><span class="mq-item">Accounting module from scratch</span><span class="mq-item">−2–3% COGS</span><span class="mq-item">97% on-time delivery</span><span class="mq-item">85%+ stock accuracy</span><span class="mq-item">500+ daily orders</span><span class="mq-item">Mercedes &amp; Netflix launch ops</span>
+    <span class="mq-item">Bridge: 3 tools &#8594; 1 workspace</span><span class="mq-item">OKRs · tasks · comms — live in ~3 months</span><span class="mq-item">Bakery ERP built from scratch</span><span class="mq-item">Built Evarca — a live people &amp; ops SaaS</span><span class="mq-item">10 min &#8594; &lt;1 min completion</span><span class="mq-item">Zero-downtime migration</span><span class="mq-item">Accounting module from scratch</span><span class="mq-item">−2–3% COGS</span><span class="mq-item">97% on-time delivery</span><span class="mq-item">87% stock accuracy</span><span class="mq-item">500+ daily orders</span><span class="mq-item">Mercedes &amp; Netflix launch ops</span>
   </div>
 </div>
 
@@ -904,7 +951,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <section class="section" id="product">
   <div class="ghost" data-speed=".17">Evarca</div>
   <div class="wrap">
-    <div class="sec-tag rv">06 / Flagship product</div>
+    <div class="sec-tag rv">06 / My own product</div>
     <h2 class="sec-title rv">The SaaS I <span class="accent">built.</span></h2>
     <div class="evarca">
       <div class="ev-main rv">
@@ -961,6 +1008,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       <div class="srow rv" style="--lv:86%"><span class="srow-idx">06</span><span class="srow-name">Power BI &amp; DAX <span class="core">Core</span></span><span class="srow-num"><span data-count="86">0</span><small>%</small></span></div>
       <div class="srow rv" style="--lv:82%"><span class="srow-idx">07</span><span class="srow-name">ERP &amp; CRM Systems <span class="core">Core</span></span><span class="srow-num"><span data-count="82">0</span><small>%</small></span></div>
       <div class="srow rv" style="--lv:80%"><span class="srow-idx">08</span><span class="srow-name">Automation &amp; AI Workflows <span class="core">Core</span></span><span class="srow-num"><span data-count="80">0</span><small>%</small></span></div>
+      <div class="srow rv" style="--lv:84%"><span class="srow-idx">09</span><span class="srow-name">Platform &amp; App Development</span><span class="srow-num"><span data-count="84">0</span><small>%</small></span></div>
     </div>
     <div class="skill-note rv">+ Python · Java · GA4 · Supply chain · Inventory · Negotiation · Leadership</div>
   </div>
@@ -1161,11 +1209,71 @@ $$('[data-cv]').forEach(function(a){
   a.addEventListener('click', function(){ if (typeof gtag==='function') gtag('event','cv_download'); });
 });
 
-/* ---------- Year + experience + Dubai clock ---------- */
+/* ============================================================
+   DYNAMIC DATES — the ONLY place you edit time-based numbers.
+   Everything below is computed fresh on the day the page opens,
+   so "years experience" and tenure stay correct forever.
+
+   WORK_PERIODS drives the "Years experience" counter. It sums
+   only the time actually worked — gaps are excluded, overlapping
+   jobs are counted once. Rules:
+   • Started a new job?  Add a line: ['YYYY-MM-DD', null]
+   • Left a job?         Replace null with the end date.
+   • null always means "still working here today" — that entry
+     also powers the live "· X yr Y mo" tenure on the current role.
+   ============================================================ */
+var WORK_PERIODS = [
+  ['2019-04-01','2020-07-31'],  // Karmavati Tools — Assistant Manager Intern (India)
+  ['2022-11-01','2023-01-31'],  // Amazon UK — Warehouse Operations
+  ['2023-02-01','2023-04-30'],  // Arc Hospitality — UK
+  ['2023-04-01','2023-05-31'],  // Jankalyan — Management Intern (overlap counted once)
+  ['2024-01-01','2024-10-31'],  // Floward — Operational Supervisor
+  ['2024-11-01', null]          // BloomingBox — current role
+];
+var DAY_MS = 86400000;
+function totalWorkedYears(){
+  var now = Date.now();
+  var iv = WORK_PERIODS.map(function(p){
+    var s = new Date(p[0]).getTime();
+    var e = p[1] ? new Date(p[1]).getTime() + DAY_MS : now;
+    return [s, Math.min(e, now)];
+  }).sort(function(a,b){ return a[0]-b[0]; });
+  var ms = 0, cs = null, ce = null;
+  iv.forEach(function(p){
+    if (p[1] <= p[0]) return;
+    if (cs === null){ cs = p[0]; ce = p[1]; return; }
+    if (p[0] <= ce){ ce = Math.max(ce, p[1]); }
+    else { ms += ce - cs; cs = p[0]; ce = p[1]; }
+  });
+  if (cs !== null) ms += ce - cs;
+  return ms / (DAY_MS * 365.25);
+}
+function currentRoleStart(){
+  var cur = null;
+  WORK_PERIODS.forEach(function(p){ if (p[1] === null) cur = p[0]; });
+  return cur;
+}
+function tenureText(fromStr){
+  var from = new Date(fromStr), now = new Date();
+  var m = (now.getFullYear()-from.getFullYear())*12 + (now.getMonth()-from.getMonth());
+  if (now.getDate() < from.getDate()) m--;
+  if (m < 1) m = 1;
+  var y = Math.floor(m/12), r = m%12, out = [];
+  if (y) out.push(y + ' yr' + (y>1?'s':''));
+  if (r) out.push(r + ' mo');
+  return out.join(' ');
+}
+
+/* ---------- Year + experience + tenure + Dubai clock ---------- */
 $('#year').textContent = new Date().getFullYear();
 (function(){
-  var years = Math.floor((Date.now() - new Date('2022-11-01').getTime())/(1000*60*60*24*365.25));
+  var years = Math.floor(totalWorkedYears());
   var el = $('#expYears'); if (el) el.setAttribute('data-count', years);
+})();
+(function(){
+  var cur = currentRoleStart(); if (!cur) return;
+  var row = $('#xpNow');
+  if (row) row.textContent = row.textContent + ' · ' + tenureText(cur);
 })();
 (function(){
   var el = $('#dxbTime');
@@ -1258,7 +1366,8 @@ if (finePointer && !reduced){
       if (card.dataset.asmCtl === '1') return;
       var r = card.getBoundingClientRect();
       var px = (e.clientX - r.left)/r.width, py = (e.clientY - r.top)/r.height;
-      card.style.transform = 'perspective(1100px) rotateX(' + ((py-.5)*-9) + 'deg) rotateY(' + ((px-.5)*9) + 'deg) translateZ(0)';
+      var amp = card.classList.contains('wide') ? 3 : 6; /* gentle tilt — the card never swings away from your cursor */
+      card.style.transform = 'perspective(1100px) rotateX(' + ((py-.5)*-amp) + 'deg) rotateY(' + ((px-.5)*amp) + 'deg) translateZ(0)';
       card.style.setProperty('--gx', (px*100)+'%');
       card.style.setProperty('--gy', (py*100)+'%');
     });
@@ -1276,14 +1385,14 @@ if (finePointer && !reduced){
   var ctx = cv.getContext('2d'), hero = $('.hero');
   var P = [], W, H, dpr, running = false, raf;
   function size(){
-    dpr = Math.min(devicePixelRatio||1, 2);
+    dpr = Math.min(devicePixelRatio||1, 1.5);
     W = hero.offsetWidth; H = hero.offsetHeight;
     cv.width = W*dpr; cv.height = H*dpr; cv.style.width=W+'px'; cv.style.height=H+'px';
     ctx.setTransform(dpr,0,0,dpr,0,0);
   }
   function init(){
     size(); P = [];
-    var n = Math.min(85, Math.floor(W/15));
+    var n = Math.min(45, Math.floor(W/26)); /* lighter particle field — keeps scrolling at full frame rate */
     for (var i=0;i<n;i++){
       P.push({x:Math.random()*W, y:Math.random()*H,
         vx:(Math.random()-.5)*.35, vy:(Math.random()-.5)*.35,
@@ -1399,7 +1508,7 @@ $$('[data-flip]').forEach(function(t){
 /* ---------- Scramble roles ---------- */
 (function(){
   var el = $('#scramble'); if (!el || reduced) return;
-  var roles = ['BUSINESS PROCESS & SYSTEMS ANALYST','FOUNDER OF EVARCA — SAAS','PROJECT MANAGER','ERP & AUTOMATION SPECIALIST','POWER BI DEVELOPER','OPERATIONS OPTIMISER','SUPPLY CHAIN PROBLEM-SOLVER'];
+  var roles = ['BUSINESS PROCESS & SYSTEMS ANALYST','BUILDER OF BRIDGE — OKR & OPS WORKSPACE','FOUNDER OF EVARCA — SAAS','PROJECT MANAGER','ERP & AUTOMATION SPECIALIST','POWER BI DEVELOPER','OPERATIONS OPTIMISER','SUPPLY CHAIN PROBLEM-SOLVER'];
   var pool = '!<>-_/[]{}=+*^?#';
   var i = 0;
   function scrambleTo(txt){
@@ -1471,10 +1580,18 @@ var PROJECTS = {
   p4:{cat:'Process Improvement', title:'Inventory Accuracy & Reconciliation System', org:'BloomingBox LLC · Nov 2024 – Jan 2025',
     chal:'Inaccurate stock, wrong deductions, 132+ weekly reconciliations, no purchase approvals, untracked wastage.',
     sol:['Redesigned the flow from receiving to consumption with checkpoints.','Automated stock deduction — manual errors eliminated.','Wastage + over-consumption tracking with variance reports.','Mandatory multi-level purchase approvals and smart entry validations.'],
-    chips:['Accuracy 85–90%','132 → 30–35 recs','100% approvals','Wastage visible']}
+    chips:['Accuracy 85–90%','132 → 30–35 recs','100% approvals','Wastage visible']},
+  p5:{cat:'Flagship Platform · Built Solo', title:'Bridge — One Workspace for OKRs, Tasks & Internal Comms', org:'BloomingBox LLC · 2026 – Present',
+    chal:'OKRs, task management and internal communication lived in three separate paid tools — three subscriptions, three logins, and none of them talked to each other.',
+    sol:['Designed and developed the entire platform alone — and had it live in about three months.','All three modules finished and in daily use: OKRs, task management and internal communication — one workspace for the whole team.','Replaced the three paid tools; licence costs cut and every update now lands in one place.','Still shipping — new features and upgrades released continuously.'],
+    chips:['3 tools → 1','Designed & built solo','All 3 modules live','Licence costs cut','Continuously upgraded']},
+  p6:{cat:'ERP · New Build', title:'Bakery ERP, Built From Scratch for F&B', org:'BloomingBox LLC · Late 2025 – 2026',
+    chal:'BloomingBox brought bakery in-house — and an ERP made for flowers and gifting cannot run food production. The bakery needed its own system, thought through from an F&B point of view.',
+    sol:['Developed an entirely new ERP dedicated to the in-house bakery.','Designed from a food & beverage point of view — built around how a food operation works, not adapted from gifting or retail flows.','Another end-to-end build: design, development and rollout, owned by one person.'],
+    chips:['0→1 build','F&B-first design','In-house bakery','Built end-to-end']}
 };
 var overlay = $('#overlay');
-var lockY = 0, lastFocus = null;
+var lockY = 0, lastFocus = null, openedAt = 0;
 window.__locked = false;
 function lockBody(){
   window.__locked = true;
@@ -1492,7 +1609,12 @@ function unlockBody(){
   document.body.style.position = ''; document.body.style.top = '';
   document.body.style.left = ''; document.body.style.right = '';
   document.body.style.width = ''; document.body.style.overflow = '';
+  /* restore the scroll position INSTANTLY — without this the page visibly
+     leapt to the top and glided back down every time a sheet was closed */
+  var rs = document.documentElement.style;
+  rs.scrollBehavior = 'auto';
   window.scrollTo(0, lockY);
+  rs.scrollBehavior = '';
 }
 function openSheet(cfg){
   $('#shCat').textContent = cfg.cat;
@@ -1507,6 +1629,7 @@ function openSheet(cfg){
   var ch = $('#shChips'); ch.innerHTML = '';
   (cfg.chips || []).forEach(function(c){ var sp = document.createElement('span'); sp.className='chip'; sp.textContent = c; ch.appendChild(sp); });
   overlay.classList.add('open');
+  openedAt = Date.now(); /* so an accidental extra click right after opening can't close it */
   lockBody();
   lastFocus = document.activeElement;
   setTimeout(function(){ var c = $('#sheetClose'); if (c) c.focus(); }, 80);
@@ -1522,12 +1645,29 @@ function closeProj(){
   if (lastFocus && lastFocus.focus){ try{ lastFocus.focus(); }catch(err){} }
   lastFocus = null;
 }
+/* Press-to-open that survives the smooth-scroll glide: the page keeps moving
+   for a moment after you scroll, which made normal clicks land "between" cards.
+   Now: press on a card and release without dragging (<12px) => it opens,
+   even if the content was still gliding underneath the cursor. */
+function bindPress(el, fn){
+  if (!window.PointerEvent){ el.addEventListener('click', fn); return; }
+  var sx = 0, sy = 0, pid = null;
+  el.addEventListener('pointerdown', function(e){
+    if (e.button > 0) return;
+    pid = e.pointerId; sx = e.clientX; sy = e.clientY;
+  });
+  addEventListener('pointerup', function(e){
+    if (pid === null || e.pointerId !== pid) return;
+    pid = null;
+    if (Math.abs(e.clientX - sx) + Math.abs(e.clientY - sy) < 12) fn();
+  }, {passive:true});
+}
 $$('.proj').forEach(function(card){
-  card.addEventListener('click', function(){ openProj(card.getAttribute('data-proj')); });
+  bindPress(card, function(){ openProj(card.getAttribute('data-proj')); });
   card.addEventListener('keydown', function(e){ if (e.key==='Enter'||e.key===' '){ e.preventDefault(); openProj(card.getAttribute('data-proj')); } });
 });
 $('#sheetClose').addEventListener('click', closeProj);
-overlay.addEventListener('click', function(e){ if (e.target === overlay) closeProj(); });
+overlay.addEventListener('click', function(e){ if (e.target === overlay && Date.now() - openedAt > 500) closeProj(); });
 addEventListener('keydown', function(e){ if (e.key==='Escape') closeProj(); });
 overlay.addEventListener('keydown', function(e){
   if (e.key !== 'Tab' || !overlay.classList.contains('open')) return;
@@ -1541,8 +1681,8 @@ overlay.addEventListener('keydown', function(e){
 /* ---------- Clickable roles: details sheets ---------- */
 var ROLES = {
   r1:{cat:'Full-time · Nov 2024 — Present', title:'Business Process & Systems Analyst', org:'BloomingBox LLC · Dubai, UAE',
-    sol:['Bridge between departments — aligning technical solutions with operational goals.','Directed collaborations with Mercedes and Netflix, preparing systems for strategic partnerships.','Partially led implementation of accounting systems, CRM platforms and mobile app deployment.','Spearheaded automation: AI-driven workflows, barcoding systems, process optimisation.','Supported new warehouse and store launches with infrastructure and data-driven reporting.','Built Power BI dashboards with advanced DAX for cost analysis and variance tracking.'],
-    chips:['10 min → <1 min completion','132 → 30–35 reconciliations','85%+ stock accuracy','COGS −2–3%','Accounting module 0→1','ERP migrations done']},
+    sol:['Own the company’s systems end to end — daily ERP operations, audits, backups, data integrity, security and compliance.','Designed & built Bridge alone: OKRs, task management and internal communication in one workspace, replacing three separate tools — still upgrading it.','Developed a brand-new ERP for the in-house bakery, from an F&B point of view.','The link between departments — aligning technical solutions with operational goals.','Directed collaborations with Mercedes and Netflix, preparing systems for strategic partnerships.','Spearheaded automation: AI-driven workflows, barcoding systems, process optimisation.','Built Power BI dashboards with advanced DAX for cost analysis and variance tracking.','Write the SOPs, user manuals and training that make new systems stick; manage vendors and dev teams for upgrades, integrations and custom reports.'],
+    chips:['Bridge: 3 tools → 1','Bakery ERP 0→1','10 min → <1 min completion','132 → 30–35 reconciliations','COGS −2–3%','Accounting module 0→1']},
   r2:{cat:'Full-time · Jan — Nov 2024', title:'Operational Supervisor', org:'Floward · Abu Dhabi & Al Ain, UAE',
     sol:['Managed 500+ daily order transactions across two cities.','Coordinated suppliers, customer service, inventory teams, drivers and florists.','Oversaw advance food ordering, verified order details, resolved complaints across channels.','Trained subordinates and gave continuous feedback to keep deliveries on time.','Created and analysed performance reports; implemented efficiency solutions.'],
     chips:['>97% on-time delivery','Complaints −7%','Wastage controlled','500+ daily orders']},
@@ -1559,6 +1699,11 @@ var ROLES = {
     sol:['Supported inventory control, supplier coordination and customer service.','Hands-on with team scheduling, order management and POS systems.','Assisted marketing efforts to improve store visibility.'],
     chips:['POS system installed','Bayaskar stock software','Ran store through COVID']}
 };
+/* Live tenure on the current role card — computed from WORK_PERIODS above */
+(function(){
+  var cur = currentRoleStart();
+  if (cur && ROLES.r1) ROLES.r1.cat += ' · ' + tenureText(cur);
+})();
 $$('.xp').forEach(function(row, i){
   var id = 'r' + (i + 1);
   var go = document.createElement('span');
@@ -1573,7 +1718,7 @@ $$('.xp').forEach(function(row, i){
     var r = ROLES[id]; if (!r) return;
     openSheet({cat:r.cat, title:r.title, org:r.org, sol:r.sol, lbl2:'What I did', chips:r.chips, ev:'role_open', id:id});
   }
-  row.addEventListener('click', openRole);
+  bindPress(row, openRole);
   row.addEventListener('keydown', function(e){ if (e.key==='Enter' || e.key===' '){ e.preventDefault(); openRole(); } });
 });
 
@@ -1588,8 +1733,11 @@ $$('.rating button').forEach(function(b){
 $('#feedbackForm').addEventListener('submit', function(e){
   e.preventDefault();
   var name = $('#fName').value.trim(), email = $('#fEmail').value.trim();
-  if (!name || !email || !rating){ alert('Please fill in your name, email and a rating.'); return; }
   var sb = $('.submit-btn'), errEl = $('#formErr');
+  if (!name || !email || !rating){
+    if (errEl){ errEl.textContent = 'Please add your name, email and a rating first \u2014 then hit send.'; errEl.style.display = 'block'; }
+    return;
+  }
   sb.disabled = true; var prev = sb.textContent; sb.textContent = 'Sending\u2026';
   if (errEl) errEl.style.display = 'none';
   var fd = new FormData();
@@ -1604,7 +1752,7 @@ $('#feedbackForm').addEventListener('submit', function(e){
     })
     .catch(function(){
       sb.disabled = false; sb.textContent = prev;
-      if (errEl) errEl.style.display = 'block';
+      if (errEl){ errEl.innerHTML = 'Couldn’t send right now — <a href="https://wa.me/971509660624" target="_blank" rel="noopener noreferrer">message me on WhatsApp</a> instead.'; errEl.style.display = 'block'; }
     });
 });
 /* ---------- Section title word reveal ---------- */
@@ -1647,7 +1795,11 @@ $$('.sec-title').forEach(function(t){
   });
   addEventListener('resize', function(){ tracks.forEach(function(tr){ tr.half = tr.el.scrollWidth/2; }); });
 
-  var smoothActive = finePointer && !reduced && innerWidth > 900;
+  /* Custom glide-scroll DISABLED — the page now scrolls natively, so it stops
+     the instant you stop. Nothing drifts under your cursor any more, and one
+     soft click always lands on the card you're looking at.
+     (To bring the old glide back: finePointer && !reduced && innerWidth > 900) */
+  var smoothActive = false;
   window.__smoothScroll = smoothActive;
   var mainEl = document.querySelector('main');
   var spacer = null, cur = scrollY, lastY = scrollY, vel = 0, sk = 0;
@@ -1664,7 +1816,7 @@ $$('.sec-title').forEach(function(t){
     setTimeout(sizeSpacer, 600); setTimeout(sizeSpacer, 1600);
     if (window.ResizeObserver){ new ResizeObserver(sizeSpacer).observe(mainEl); }
   }
-  var heroWrap = $('.hero .wrap');
+  var heroWrap = $('.hero .wrap'), hopS = 1;
   var fpsT = performance.now(), fpsN = 0, fpsDone = false;
   function loop(){
     if (window.__locked){ requestAnimationFrame(loop); return; }
@@ -1677,17 +1829,21 @@ $$('.sec-title').forEach(function(t){
       if (window.__lite) sk = 0;
       mainEl.style.transform = 'translate3d(0,' + (-cur).toFixed(2) + 'px,0)' + (Math.abs(sk) > .02 ? ' skewY(' + sk.toFixed(3) + 'deg)' : '');
     } else { cur = target; }
-    if (heroWrap && !reduced && cur < innerHeight * 1.3){
-      heroWrap.style.transform = 'translate3d(0,' + (cur * .18) + 'px,0)';
-      var hop = Math.max(0, 1 - cur/720);
-      heroWrap.style.opacity = hop;
-      heroWrap.style.pointerEvents = hop < .3 ? 'none' : '';
+    if (heroWrap && !reduced && cur < innerHeight * 1.6){
+      /* the hero sits perfectly still now (no parallax shift); it only fades
+         out gently after 240px, and the fade is smoothed so wheel steps
+         never make the name or the stats line jitter */
+      var hop = Math.max(0, 1 - Math.max(0, cur - 240)/820);
+      hopS += (hop - hopS) * .2;
+      if (Math.abs(hopS - hop) < .01) hopS = hop;
+      heroWrap.style.opacity = hopS.toFixed(3);
+      heroWrap.style.pointerEvents = hopS < .3 ? 'none' : '';
     }
     if (!reduced){
-      var boost = Math.min(Math.abs(vel) * .12, 7);
+      /* constant, calm marquee speed — no more lurching when you scroll */
       for (var i=0;i<tracks.length;i++){
         var tr = tracks[i];
-        tr.x += (.7 + boost) * tr.dir * tr.hover;
+        tr.x += .8 * tr.dir * tr.hover;
         if (tr.x <= -tr.half) tr.x += tr.half;
         if (tr.x >= 0) tr.x -= tr.half;
         tr.el.style.transform = 'translate3d(' + tr.x.toFixed(2) + 'px,0,0)';
@@ -1698,7 +1854,7 @@ $$('.sec-title').forEach(function(t){
       var fpsEl = performance.now() - fpsT;
       if (fpsEl > 2200){
         fpsDone = true;
-        if (fpsN / (fpsEl / 1000) < 42){ document.documentElement.classList.add('lite'); window.__lite = true; }
+        if (fpsN / (fpsEl / 1000) < 48){ document.documentElement.classList.add('lite'); window.__lite = true; }
       }
     }
     var h = document.documentElement, max = h.scrollHeight - h.clientHeight;
@@ -1764,18 +1920,19 @@ function finalizeName(){
   setTimeout(done, 2600);
 })();
 
-/* ---------- Assemble / break on scroll ---------- */
+/* ---------- Assemble on scroll (entry only — items latch visible) ---------- */
 (function(){
   if (reduced) return;
   var isMobile = innerWidth < 700;
   var K = isMobile ? .45 : 1;
+  /* Gentle entry drift — small distances so cards never slide over their neighbours */
   function vecFor(mode, i){
     var x=0, y=0, r=0;
-    if (mode === 'corner'){ var c=i%4; x=(c%2===0?-1:1)*210; y=(c<2?-1:1)*150; r=(c%2===0?-9:9); }
-    else if (mode === 'alt'){ x=(i%2===0?-1:1)*240; y=50; r=(i%2===0?-7:7); }
-    else if (mode === 'left'){ x=-260; y=40; r=-5; }
-    else if (mode === 'right'){ x=260; y=40; r=5; }
-    else { x=((i*73)%3-1)*230; if (x===0) x=(i%2?1:-1)*130; y=((i*37)%2===0?-1:1)*160; r=((i*53)%5-2)*7; }
+    if (mode === 'corner'){ var c=i%4; x=(c%2===0?-1:1)*40; y=(c<2?1:1)*36; r=(c%2===0?-2:2); }
+    else if (mode === 'alt'){ x=(i%2===0?-1:1)*34; y=44; r=(i%2===0?-1.5:1.5); }
+    else if (mode === 'left'){ x=-60; y=18; r=-1.2; }
+    else if (mode === 'right'){ x=60; y=18; r=1.2; }
+    else { x=((i*73)%3-1)*40; if (x===0) x=(i%2?1:-1)*28; y=44; r=((i*53)%5-2)*1.5; }
     return [x*K, y*K, r*(isMobile?.5:1)];
   }
   var groups = [
@@ -1798,6 +1955,7 @@ function finalizeName(){
       var outer = document.createElement('div');
       var inner = document.createElement('div');
       outer.style.display = (disp.indexOf('inline') === 0) ? 'inline-block' : 'block';
+      if (el.classList.contains('wide')) outer.style.gridColumn = '1 / -1';
       inner.style.transformStyle = 'preserve-3d';
       inner.style.willChange = 'transform,opacity';
       inner.style.height = '100%';
@@ -1811,33 +1969,37 @@ function finalizeName(){
   });
   addEventListener('resize', function(){ items.forEach(function(it){ it.h = it.o.offsetHeight; }); });
   function smooth(t){ return t*t*(3-2*t); }
+  /* ENTRY-ONLY: items glide in once as they enter from below, then LATCH.
+     Once something is on screen it stays fully visible forever — nothing
+     breaks apart, fades or overlaps again while you read or scroll back up. */
   function asmUpdate(){
     var vh = innerHeight;
     var sY = window.scrollY || 0;
     var roomBelow = document.documentElement.scrollHeight - (sY + vh);
     var endBoost = 1 - Math.min(Math.max(roomBelow/(vh*.35), 0), 1);
-    var topBoost = 1 - Math.min(Math.max(sY/(vh*.35), 0), 1);
+    var allDone = true;
     for (var i=0; i<items.length; i++){
       var it = items[i];
+      if (it.done) continue;
+      allDone = false;
       var c = it.o.getBoundingClientRect().top + it.h/2;
-      if (c < -360 || c > vh + 360) continue;
-      var pIn  = Math.min(Math.max((vh*1.08 - c)/(vh*.20), 0), 1);
-      var pOut = Math.min(Math.max((c - vh*.02)/(vh*.10), 0), 1);
+      if (c > vh + 360) continue; /* far below the fold — handled when it gets close */
+      var pIn = Math.min(Math.max((vh*1.06 - c)/(vh*.22), 0), 1);
       if (endBoost > 0) pIn = Math.max(pIn, endBoost);
-      if (topBoost > 0) pOut = Math.max(pOut, topBoost);
-      var f = 1 - smooth(Math.min(pIn, pOut));
-      var dir = c > vh*.5 ? 1 : -1;
+      if (c < vh*.6) pIn = 1; /* already well inside the viewport — show fully, no exceptions */
+      var f = 1 - smooth(pIn);
       if (f < .006){
-        if (it.ctl){ it.n.style.transform=''; it.n.style.opacity=''; it.n.style.pointerEvents=''; it.ctl=false; it.pe=false; }
-      } else if (f > .02 || it.ctl){
+        it.n.style.transform=''; it.n.style.opacity=''; it.n.style.pointerEvents='';
+        it.done = true; it.ctl = false; it.pe = false;
+      } else {
         it.ctl = true;
-        it.n.style.transform = 'translate3d(' + (it.x*f*dir).toFixed(2) + 'px,' + (it.y*f).toFixed(2) + 'px,0) rotate(' + (it.r*f*dir).toFixed(2) + 'deg)';
+        it.n.style.transform = 'translate3d(' + (it.x*f).toFixed(2) + 'px,' + (it.y*f).toFixed(2) + 'px,0) rotate(' + (it.r*f).toFixed(2) + 'deg)';
         it.n.style.opacity = Math.max(0, 1 - f*1.05).toFixed(3);
         var blocked = it.pe ? f > .5 : f > .65;
         if (blocked !== it.pe){ it.pe = blocked; it.n.style.pointerEvents = blocked ? 'none' : ''; }
       }
     }
-    requestAnimationFrame(asmUpdate);
+    if (!allDone) requestAnimationFrame(asmUpdate);
   }
   asmUpdate();
 })();
