@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-<title>Kartik Hushare — Business Process & Systems Analyst · Dubai</title>
-<meta name="description" content="Kartik Hushare — Business Process & Systems Analyst in Dubai. Built Bridge (OKRs, tasks & internal comms in one workspace, replacing 3 tools), a full F&B bakery ERP, and Evarca — a people & operations SaaS. ERP, automation, Power BI.">
-<meta property="og:title" content="Kartik Hushare — Business Process & Systems Analyst · Dubai">
-<meta property="og:description" content="I make slow operations fast — and when software doesn't fit, I build it: Bridge, a bakery ERP and Evarca. ERP, automation, analytics — Dubai, UAE.">
+<title>Kartik Hushare — Systems & AI Automation Builder · ERP · Power BI · Dubai</title>
+<meta name="description" content="Kartik Hushare — Business Process & Systems Analyst in Dubai who builds the software himself. Solo-built Bridge (OKRs, tasks & comms — replaced 3 paid tools), a full F&B bakery ERP, Evarca SaaS, and 6+ AI-driven workflows. ERP, AI automation, Power BI (advanced DAX).">
+<meta property="og:title" content="Kartik Hushare — Systems & AI Automation Builder · Dubai">
+<meta property="og:description" content="I turn broken processes into working software — ERP, AI automation and analytics. Built Bridge, a bakery ERP and Evarca solo; systems behind BloomingBox's Mercedes & Netflix launches.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0C6B4D">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C6B4D'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='%23F6F5EF' text-anchor='middle'%3EKH%3C/text%3E%3C/svg%3E">
@@ -50,7 +50,8 @@ if (window.GA4_ID && window.GA4_ID.indexOf('XXXX') === -1){
     "https://www.instagram.com/kartikhushare",
     "https://evarca.com"
   ],
-  "knowsLanguage": ["English", "Hindi", "Marathi", "Marwari"]
+  "knowsLanguage": ["English", "Hindi", "Marathi", "Marwari"],
+  "knowsAbout": ["ERP Implementation", "AI Workflow Automation", "Power BI", "DAX", "SQL", "Business Process Analysis", "Systems Integration", "AWS", "React", "Machine Learning"]
 }
 </script>
 
@@ -225,6 +226,18 @@ ul{list-style:none}
 .chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;background:var(--card);border:1px solid var(--line);border-radius:50px;padding:8px 14px;color:var(--muted);transition:all .3s var(--ease)}
 .chip:hover{border-color:var(--green);color:var(--green);transform:translateY(-2px)}
 .about-side{display:flex;flex-direction:column;gap:14px}
+/* Recruiter "At a glance" card */
+.glance{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 22px 18px;margin-bottom:12px;position:relative;overflow:hidden;transition:transform .45s var(--easeOut),box-shadow .45s}
+.glance:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(15,23,19,.1)}
+.glance::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold))}
+.glance-k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);margin-bottom:14px}
+.glance-row{display:grid;grid-template-columns:78px 1fr;gap:12px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line)}
+.glance-row span{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.glance-row b{font-family:var(--body);font-weight:600;font-size:13.5px;line-height:1.35;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.glance-row .live{width:7px;height:7px;border-radius:50%;background:var(--emerald);animation:pulse 2s infinite;flex:none;display:inline-block}
+.glance-cv{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:var(--gold);color:#1a1205;padding:10px 16px;border-radius:50px;cursor:pointer;transition:background .3s,color .3s,transform .3s var(--easeOut)}
+.glance-cv svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.glance-cv:hover{background:var(--ink);color:#F6F5EF;transform:translateY(-2px)}
 .lang{display:flex;align-items:center;gap:14px}
 .lang b{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;width:84px;flex:none;font-weight:500}
 .lang .bar{flex:1;height:6px;border-radius:6px;background:#EBEAE0;overflow:hidden}
@@ -272,7 +285,31 @@ body:not(.cursor-on) .proj,body:not(.cursor-on) .xp{cursor:pointer}
 .proj:hover .proj-open svg{stroke:#fff;transform:rotate(45deg)}
 @media(max-width:880px){.proj-grid{grid-template-columns:1fr}}
 
-/* ================= SKILL ROWS ================= */
+/* ================= SKILL CARDS ================= */
+.skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skg{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px 26px 24px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .45s var(--easeOut),box-shadow .45s,border-color .3s}
+.skg:hover{transform:translateY(-7px);box-shadow:0 24px 60px rgba(15,23,19,.12);border-color:#CFE2D8}
+.skg::after{content:"";position:absolute;inset:auto 0 0 0;height:3px;background:linear-gradient(90deg,var(--green),var(--gold));transform:scaleX(0);transform-origin:left;transition:transform .5s var(--easeOut)}
+.skg:hover::after{transform:scaleX(1)}
+.skg-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.skg-idx{font-family:var(--mono);font-size:11px;color:var(--muted);letter-spacing:.14em}
+.skg-core{font-family:var(--mono);font-size:9px;letter-spacing:.16em;color:var(--gold);border:1px solid #E6D2A6;border-radius:5px;padding:3px 7px;text-transform:uppercase;font-weight:500}
+.skg h3{font-family:var(--display);font-weight:750;font-variation-settings:'wdth' 108;font-size:clamp(20px,2.2vw,25px);letter-spacing:-.015em;line-height:1.15;margin-bottom:10px}
+.skg-proof{font-size:13.5px;color:var(--muted);line-height:1.55;margin-bottom:18px}
+.skg-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.skg-chips .chip{font-size:10px;padding:7px 12px;text-transform:none;letter-spacing:.03em}
+.skg.feature{background:var(--green);border-color:var(--green)}
+.skg.feature:hover{box-shadow:0 24px 60px rgba(12,107,77,.35);border-color:var(--green)}
+.skg.feature .skg-idx{color:#BFE0CE}
+.skg.feature .skg-core{color:var(--gold);border-color:rgba(217,161,59,.55)}
+.skg.feature h3{color:#fff}
+.skg.feature .skg-proof{color:#CFE7DA}
+.skg.feature .chip{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.18);color:#E5F1EA}
+.skg.feature .chip:hover{border-color:var(--gold);color:#fff}
+.skg.feature::after{background:var(--gold)}
+@media(max-width:980px){.skill-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.skill-grid{grid-template-columns:1fr;gap:14px}.skg{padding:22px 20px 20px;border-radius:18px}}
+/* legacy rows (kept for safety) */
 .skill-rows{border-top:1px solid var(--line)}
 .srow{display:grid;grid-template-columns:54px 1fr auto;gap:22px;align-items:center;padding:24px 16px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
 .srow::before{content:"";position:absolute;left:0;top:0;bottom:0;width:0%;background:var(--mint);transition:width .9s var(--easeOut);z-index:-1}
@@ -302,6 +339,10 @@ body:not(.cursor-on) .proj,body:not(.cursor-on) .xp{cursor:pointer}
 .cert.prog svg{stroke:var(--gold)}
 .cert.prog{border-style:dashed}
 .cert small{color:var(--muted)}
+.cert-also{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;padding-top:16px;border-top:1px dashed var(--line)}
+.cert-also-k{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-right:6px}
+.cert.minor{font-size:10.5px;padding:7px 13px;color:var(--muted);background:transparent;border-color:var(--line)}
+.cert.minor:hover{color:var(--ink);transform:none;border-color:#CFE2D8}
 @media(max-width:880px){.edu-grid{grid-template-columns:1fr}}
 
 /* ================= BEYOND TILES ================= */
@@ -470,6 +511,10 @@ body{transition:background-color .9s ease}
 .imp.feature .imp-sub{color:#BFE0CE}
 .imp.feature::after{background:var(--gold)}
 .imp.feature:hover{box-shadow:0 24px 60px rgba(12,107,77,.35)}
+.imp.gold{background:linear-gradient(135deg,#FFF9EC,#FBEFD3);border-color:#EBD7A8}
+.imp.gold .flip .new{color:#8A6212;font-size:clamp(22px,2.6vw,30px);letter-spacing:-.01em}
+.imp.gold .imp-sub::before{background:var(--green)}
+.imp.gold::after{background:linear-gradient(90deg,var(--gold),var(--green))}
 #projects{background:var(--ink);margin:46px clamp(8px,2vw,26px);border-radius:clamp(22px,4vw,44px);padding:96px 0 84px;overflow:hidden}
 #projects .ghost{-webkit-text-stroke:1.5px rgba(255,255,255,.08)}
 #projects .sec-tag{color:var(--emerald)}
@@ -486,6 +531,14 @@ body{transition:background-color .9s ease}
 #projects .proj-open{border-color:rgba(255,255,255,.22)}
 #projects .proj-open svg{stroke:#F6F5EF}
 #projects .proj:hover .proj-open{background:var(--emerald);border-color:var(--emerald)}
+/* AI flagship card — gold accent */
+#projects .proj.ai{background:linear-gradient(135deg,#1B2218,#15211B 60%);border-color:rgba(217,161,59,.28)}
+#projects .proj.ai .proj-cat,#projects .proj.ai .proj-stat{color:var(--gold)}
+#projects .proj.ai .proj-stat small{color:var(--emerald)}
+#projects .proj.ai .glare{background:radial-gradient(420px circle at var(--gx,50%) var(--gy,50%),rgba(217,161,59,.16),transparent 65%)}
+#projects .proj.ai:hover{border-color:rgba(217,161,59,.6)}
+#projects .proj.ai:hover .proj-open{background:var(--gold);border-color:var(--gold)}
+#projects .proj.ai:hover .proj-open svg{stroke:#1a1205}
 #projects .proj .glare{background:radial-gradient(460px circle at var(--gx,50%) var(--gy,50%),rgba(17,160,107,.22),transparent 65%)}
 .svc-banner{margin-top:22px;background:var(--ink);border-radius:22px;padding:30px 34px;display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;position:relative;overflow:hidden}
 .svc-banner::before{content:"";position:absolute;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(17,160,107,.25),transparent 70%)}
@@ -711,13 +764,13 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     </div>
     <div class="o-c"><svg viewBox="0 0 24 24"><path d="M7 7l10 10M17 8v9H8"/></svg></div>
   </div>
-  <div class="side-rail" aria-hidden="true">Systems — Operations — Management</div>
+  <div class="side-rail" aria-hidden="true">Systems — AI Automation — Analytics</div>
   <div class="wrap">
     <i class="tick t1"></i><i class="tick t2"></i><i class="tick t3"></i><i class="tick t4"></i>
     <div class="hero-tag"><span class="live"></span><span>Dubai, UAE — Founder of <a href="https://evarca.com" target="_blank" rel="noopener noreferrer" data-cursor>Evarca</a> · open to work</span></div>
     <h1 id="heroName"><span class="word" data-text="KARTIK"></span><span class="word" data-text="HUSHARE"></span></h1>
     <div class="hero-roles"><span id="scramble">BUSINESS PROCESS &amp; SYSTEMS ANALYST</span><span class="cursor-bar"></span></div>
-    <p class="hero-line">Systems, operations &amp; <b>management</b> — I turn chaos into outcomes with ERP, automation and analytics.</p>
+    <p class="hero-line">I turn broken processes into <b>working software</b> — ERP, AI automation and analytics. When the right tool doesn't exist, I build it.</p>
     <div class="hero-cta">
       <a class="btn btn-solid magnetic" href="#projects" data-cursor>See the work <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost magnetic" href="#contact" data-cursor>Get in touch <svg viewBox="0 0 24 24"><path d="M4 6l8 6 8-6M4 6h16v12H4z"/></svg></a>
@@ -737,7 +790,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <!-- ============ MARQUEE 1 ============ -->
 <div class="marquee" aria-hidden="true">
   <div class="mq-track" data-mq>
-    <span class="mq-item">Power BI</span><span class="mq-item">Advanced DAX</span><span class="mq-item">ERP Systems</span><span class="mq-item">SQL</span><span class="mq-item">Automation</span><span class="mq-item">Python</span><span class="mq-item">Excel</span><span class="mq-item">Lean Six Sigma</span><span class="mq-item">Management</span><span class="mq-item">CRM</span><span class="mq-item">AWS</span><span class="mq-item">GA4</span><span class="mq-item">Supply Chain</span><span class="mq-item">F&amp;B ERP</span><span class="mq-item">OKRs</span><span class="mq-item">Inventory</span><span class="mq-item">Process Design</span><span class="mq-item">Barcoding</span>
+    <span class="mq-item">AI Automation</span><span class="mq-item">Power BI</span><span class="mq-item">Advanced DAX</span><span class="mq-item">ERP Systems</span><span class="mq-item">SQL</span><span class="mq-item">Claude · ChatGPT · Copilot</span><span class="mq-item">Python</span><span class="mq-item">React</span><span class="mq-item">Anomaly Detection</span><span class="mq-item">Prompt Engineering</span><span class="mq-item">ML Model Training</span><span class="mq-item">Lean Six Sigma</span><span class="mq-item">AWS</span><span class="mq-item">GA4</span><span class="mq-item">Supply Chain</span><span class="mq-item">F&amp;B ERP</span><span class="mq-item">OKRs</span><span class="mq-item">Process Design</span><span class="mq-item">Barcoding</span>
   </div>
 </div>
 
@@ -754,6 +807,9 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       <div class="imp rv" style="--d:.18s" data-flip><div class="imp-k">Stock accuracy</div><div class="flip"><span class="old">~60%</span><span class="new">87%</span></div><div class="imp-sub">Validation rules</div></div>
       <div class="imp rv" style="--d:.24s" data-flip><div class="imp-k">COGS reduction</div><div class="flip"><span class="new">−2–3%</span></div><div class="imp-sub">Product-level costing</div></div>
       <div class="imp rv" style="--d:.3s" data-flip><div class="imp-k">Bakery ERP · F&amp;B-first</div><div class="flip"><span class="new">0→1</span></div><div class="imp-sub">In-house bakery, from scratch</div></div>
+      <div class="imp rv" style="--d:.36s" data-flip><div class="imp-k">Manual workflows</div><div class="flip"><span class="old">Hand-run</span><span class="new">6+ AI-driven</span></div><div class="imp-sub">Smart routing · anomaly flags · auto-reports</div></div>
+      <div class="imp rv" style="--d:.42s" data-flip><div class="imp-k">Bridge build time</div><div class="flip"><span class="new">~3 months</span></div><div class="imp-sub">Solo, AI-assisted — all 3 modules live</div></div>
+      <div class="imp rv gold" style="--d:.48s" data-flip><div class="imp-k">Strategic launches</div><div class="flip"><span class="new">Mercedes · Netflix</span></div><div class="imp-sub">Systems made launch-ready</div></div>
     </div>
   </div>
 </section>
@@ -765,12 +821,21 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <div class="sec-tag rv">02 / Profile</div>
     <div class="about-strip">
       <div class="rv">
-        <p class="about-big">Systems, operations &amp; <span class="hl">management</span> — I rebuild how work flows, run the delivery, and <span class="hl">measure everything</span>. And when software doesn't fit, I <span class="hl">build my own</span> — Bridge, a bakery ERP and Evarca so far.</p>
+        <p class="about-big">I rebuild how work flows, <span class="hl">automate it with AI</span>, and <span class="hl">measure everything</span> in Power BI. When software doesn't fit, I <span class="hl">build my own</span> — AI-assisted, end to end: Bridge, a bakery ERP and Evarca so far.</p>
         <div class="about-chips">
-          <span class="chip">Systems thinker</span><span class="chip">Builds platforms solo</span><span class="chip">Automation</span><span class="chip">Management</span><span class="chip">Data-driven</span><span class="chip">Cross-functional</span><span class="chip">Lean Six Sigma</span><span class="chip">MSc Liverpool</span><span class="chip">Dubai · UAE</span>
+          <span class="chip">Systems thinker</span><span class="chip">AI-native builder</span><span class="chip">Builds platforms solo</span><span class="chip">Power BI · DAX</span><span class="chip">ERP</span><span class="chip">Data-driven</span><span class="chip">Cross-functional</span><span class="chip">Lean Six Sigma</span><span class="chip">MSc Liverpool</span><span class="chip">Dubai · UAE</span>
         </div>
       </div>
       <div class="about-side rv" style="--d:.15s">
+        <div class="glance">
+          <div class="glance-k">At a glance</div>
+          <div class="glance-row"><span>Role</span><b>Business Process &amp; Systems Analyst</b></div>
+          <div class="glance-row"><span>Base</span><b>Dubai, UAE · open to relocate</b></div>
+          <div class="glance-row"><span>Builds with</span><b>React · Python · SQL · AWS · Power BI</b></div>
+          <div class="glance-row"><span>AI stack</span><b>Claude · ChatGPT · Copilot · Cursor</b></div>
+          <div class="glance-row"><span>Status</span><b><i class="live"></i>Open to work &amp; freelance</b></div>
+          <a class="glance-cv" data-cv data-cursor>Download CV <svg viewBox="0 0 24 24"><path d="M12 3v12M8 11l4 4 4-4M5 21h14"/></svg></a>
+        </div>
         <div class="lang"><b>Hindi</b><div class="bar"><div class="fill" data-level="100"></div></div><span>Native</span></div>
         <div class="lang"><b>Marwari</b><div class="bar"><div class="fill" data-level="100"></div></div><span>Native</span></div>
         <div class="lang"><b>English</b><div class="bar"><div class="fill" data-level="95"></div></div><span>Fluent</span></div>
@@ -803,7 +868,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
         <div class="svc-num">03</div>
         <div class="svc-ic"><svg viewBox="0 0 24 24"><path d="M11 3l1.7 4.3 4.3 1.7-4.3 1.7L11 15l-1.7-4.3L5 9l4.3-1.7z"/><path d="M18 14l.9 2.1L21 17l-2.1.9L18 20l-.9-2.1L15 17l2.1-.9z"/></svg></div>
         <h3>AI Automation</h3>
-        <p>Workflows that run themselves — AI inside your operations.</p>
+        <p>Smart routing, anomaly detection, auto-reports — AI wired into your ERP so work runs itself.</p>
       </div>
       <div class="svc asm-item">
         <div class="svc-num">04</div>
@@ -844,7 +909,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       <div class="xp rv" data-cursor>
         <div class="xp-period" id="xpNow">Nov 2024 — Now</div>
         <div><div class="xp-role">Business Process &amp; Systems Analyst</div><div class="xp-co"><b>BloomingBox</b> · Dubai</div></div>
-        <div class="xp-pills"><span class="pill">Bridge: 3 tools <span class="arr">→</span> <b>1</b></span><span class="pill">Bakery ERP <b>0→1</b></span><span class="pill">10 min <span class="arr">→</span> <b>&lt;1 min</b></span><span class="pill">COGS <b>−2–3%</b></span><span class="pill"><b>Mercedes &amp; Netflix</b> ops</span></div>
+        <div class="xp-pills"><span class="pill">Bridge: 3 tools <span class="arr">→</span> <b>1</b></span><span class="pill">Bakery ERP <b>0→1</b></span><span class="pill"><b>6+</b> AI workflows</span><span class="pill">10 min <span class="arr">→</span> <b>&lt;1 min</b></span><span class="pill">COGS <b>−2–3%</b></span><span class="pill"><b>Mercedes &amp; Netflix</b> ops</span></div>
       </div>
       <div class="xp rv" data-cursor>
         <div class="xp-period">Jan — Nov 2024</div>
@@ -887,8 +952,17 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
         <div class="proj-top"><span class="proj-cat">Flagship platform · Built solo</span><span class="proj-period">2026 — Now</span></div>
         <div class="proj-stat">3<small>→</small>1</div>
         <h3>Bridge — One Workspace for OKRs, Tasks &amp; Comms</h3>
-        <p class="proj-one">Three paid tools replaced by one platform I designed and developed alone — all three modules live, still shipping upgrades.</p>
-        <div class="proj-chips"><span class="chip">OKRs</span><span class="chip">Task management</span><span class="chip">Internal comms</span><span class="chip">Licence costs cut</span><span class="chip">Continuously upgraded</span></div>
+        <p class="proj-one">Three paid tools replaced by one platform I designed and developed alone — AI-assisted, all three modules live in ~3 months, still shipping upgrades.</p>
+        <div class="proj-chips"><span class="chip">OKRs</span><span class="chip">Task management</span><span class="chip">Internal comms</span><span class="chip">AI-assisted build</span><span class="chip">Licence costs cut</span><span class="chip">Continuously upgraded</span></div>
+        <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
+      </article>
+      <article class="proj rv tilt wide ai" data-proj="p7" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
+        <div class="glare"></div>
+        <div class="proj-top"><span class="proj-cat">AI Automation · Operations</span><span class="proj-period">2025 — Now</span></div>
+        <div class="proj-stat">6<small>+ AI workflows</small></div>
+        <h3>AI-Driven Workflow Automation</h3>
+        <p class="proj-one">Hand-run operations turned into self-running ones — smart routing, anomaly detection and AI-generated reports, wired into the ERP with barcoding.</p>
+        <div class="proj-chips"><span class="chip">Auto-categorisation</span><span class="chip">Smart routing</span><span class="chip">Anomaly detection</span><span class="chip">AI-generated reports</span><span class="chip">Barcoding</span></div>
         <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
       </article>
       <article class="proj rv tilt" data-proj="p1" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
@@ -914,8 +988,8 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
         <div class="proj-top"><span class="proj-cat">Analytics</span><span class="proj-period">2024 — Now</span></div>
         <div class="proj-stat">−3<small>%</small></div>
         <h3>Product-Level COGS Engine</h3>
-        <p class="proj-one">Daily prices × recipes × orders — costed to the stem.</p>
-        <div class="proj-chips"><span class="chip">Advanced DAX</span><span class="chip">6+ dimensions</span><span class="chip">Variance analysis</span></div>
+        <p class="proj-one">Daily prices × recipes × orders — costed to the stem, with AI forecasting on top.</p>
+        <div class="proj-chips"><span class="chip">Advanced DAX</span><span class="chip">AI visuals · forecasting</span><span class="chip">6+ dimensions</span><span class="chip">Variance analysis</span></div>
         <span class="proj-open"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></span>
       </article>
       <article class="proj rv tilt" style="--d:.08s" data-proj="p4" data-cursor-label="Open" tabindex="0" role="button" aria-haspopup="dialog">
@@ -943,7 +1017,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
 <!-- ============ MARQUEE 2 ============ -->
 <div class="marquee m2" aria-hidden="true">
   <div class="mq-track" data-mq>
-    <span class="mq-item">Bridge: 3 tools &#8594; 1 workspace</span><span class="mq-item">OKRs · tasks · comms — live in ~3 months</span><span class="mq-item">Bakery ERP built from scratch</span><span class="mq-item">Built Evarca — a live people &amp; ops SaaS</span><span class="mq-item">10 min &#8594; &lt;1 min completion</span><span class="mq-item">Zero-downtime migration</span><span class="mq-item">Accounting module from scratch</span><span class="mq-item">−2–3% COGS</span><span class="mq-item">97% on-time delivery</span><span class="mq-item">87% stock accuracy</span><span class="mq-item">500+ daily orders</span><span class="mq-item">Mercedes &amp; Netflix launch ops</span>
+    <span class="mq-item">Bridge: 3 tools &#8594; 1 workspace</span><span class="mq-item">6+ AI-driven workflows automated</span><span class="mq-item">OKRs · tasks · comms — live in ~3 months</span><span class="mq-item">Built AI-assisted with Claude, ChatGPT &amp; Copilot</span><span class="mq-item">Bakery ERP built from scratch</span><span class="mq-item">Built Evarca — a live people &amp; ops SaaS</span><span class="mq-item">10 min &#8594; &lt;1 min completion</span><span class="mq-item">Zero-downtime migration</span><span class="mq-item">Accounting module from scratch</span><span class="mq-item">−2–3% COGS</span><span class="mq-item">97% on-time delivery</span><span class="mq-item">87% stock accuracy</span><span class="mq-item">500+ daily orders</span><span class="mq-item">Mercedes &amp; Netflix launch ops</span>
   </div>
 </div>
 
@@ -999,18 +1073,44 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
   <div class="wrap">
     <div class="sec-tag rv">07 / Capabilities</div>
     <h2 class="sec-title rv">What I'm <span class="accent">built on.</span></h2>
-    <div class="skill-rows">
-      <div class="srow rv" style="--lv:92%"><span class="srow-idx">01</span><span class="srow-name">Business Process Analysis <span class="core">Core</span></span><span class="srow-num"><span data-count="92">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:90%"><span class="srow-idx">02</span><span class="srow-name">Operations Management <span class="core">Core</span></span><span class="srow-num"><span data-count="90">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%"><span class="srow-idx">03</span><span class="srow-name">Data Analysis &amp; Reporting <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%"><span class="srow-idx">04</span><span class="srow-name">Management <span class="core">Core</span></span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:88%"><span class="srow-idx">05</span><span class="srow-name">Stakeholder Communication</span><span class="srow-num"><span data-count="88">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:86%"><span class="srow-idx">06</span><span class="srow-name">Power BI &amp; DAX <span class="core">Core</span></span><span class="srow-num"><span data-count="86">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:82%"><span class="srow-idx">07</span><span class="srow-name">ERP &amp; CRM Systems <span class="core">Core</span></span><span class="srow-num"><span data-count="82">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:80%"><span class="srow-idx">08</span><span class="srow-name">Automation &amp; AI Workflows <span class="core">Core</span></span><span class="srow-num"><span data-count="80">0</span><small>%</small></span></div>
-      <div class="srow rv" style="--lv:84%"><span class="srow-idx">09</span><span class="srow-name">Platform &amp; App Development</span><span class="srow-num"><span data-count="84">0</span><small>%</small></span></div>
+    <div class="skill-grid">
+      <article class="skg rv feature">
+        <div class="skg-top"><span class="skg-idx">01</span><span class="skg-core">Core</span></div>
+        <h3>AI &amp; Automation</h3>
+        <p class="skg-proof">6+ operational workflows made self-running; every platform I ship is built AI-assisted.</p>
+        <div class="skg-chips"><span class="chip">AI-driven workflow automation</span><span class="chip">Anomaly detection</span><span class="chip">Smart routing</span><span class="chip">AI-generated reporting</span><span class="chip">Claude · ChatGPT · Copilot · Cursor</span><span class="chip">Prompt engineering</span><span class="chip">ML fundamentals &amp; model training</span><span class="chip">Power BI AI visuals</span></div>
+      </article>
+      <article class="skg rv" style="--d:.06s">
+        <div class="skg-top"><span class="skg-idx">02</span><span class="skg-core">Core</span></div>
+        <h3>Systems &amp; Platforms</h3>
+        <p class="skg-proof">Three platforms built solo end to end — Bridge, a bakery ERP and Evarca — plus a zero-downtime ERP migration.</p>
+        <div class="skg-chips"><span class="chip">ERP implementation &amp; migration</span><span class="chip">Full-cycle platform development</span><span class="chip">System &amp; API integration</span><span class="chip">AWS</span><span class="chip">Digital transformation</span><span class="chip">Workflow automation</span></div>
+      </article>
+      <article class="skg rv" style="--d:.12s">
+        <div class="skg-top"><span class="skg-idx">03</span><span class="skg-core">Core</span></div>
+        <h3>Data &amp; Analytics</h3>
+        <p class="skg-proof">A product-level COGS engine across 6+ dimensions that took cost of goods down 2–3%.</p>
+        <div class="skg-chips"><span class="chip">Power BI</span><span class="chip">Advanced DAX</span><span class="chip">SQL</span><span class="chip">KPI dashboards</span><span class="chip">COGS &amp; financial modelling</span><span class="chip">Variance analysis</span><span class="chip">Forecasting</span></div>
+      </article>
+      <article class="skg rv" style="--d:.18s">
+        <div class="skg-top"><span class="skg-idx">04</span></div>
+        <h3>Business Analysis</h3>
+        <p class="skg-proof">Order completion 10 min → &lt;1 min; stock accuracy 60% → 87% — by redesigning the flow, not adding headcount.</p>
+        <div class="skg-chips"><span class="chip">Requirements gathering</span><span class="chip">Process mapping &amp; improvement</span><span class="chip">Gap analysis</span><span class="chip">Functional testing &amp; UAT</span><span class="chip">Change management</span><span class="chip">SOPs &amp; training</span></div>
+      </article>
+      <article class="skg rv" style="--d:.24s">
+        <div class="skg-top"><span class="skg-idx">05</span></div>
+        <h3>Engineering Stack</h3>
+        <p class="skg-proof">The languages and tools behind everything above — from front end to data layer.</p>
+        <div class="skg-chips"><span class="chip">React</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">ERP &amp; CRM systems</span><span class="chip">Google Analytics 4</span><span class="chip">Advanced Excel</span></div>
+      </article>
+      <article class="skg rv" style="--d:.3s">
+        <div class="skg-top"><span class="skg-idx">06</span></div>
+        <h3>Operations &amp; Leadership</h3>
+        <p class="skg-proof">500+ daily orders, 97% on-time, 40–50 people trained — and the stakeholder work that keeps five teams in sync.</p>
+        <div class="skg-chips"><span class="chip">Inventory management</span><span class="chip">SLA &amp; performance management</span><span class="chip">Stakeholder management</span><span class="chip">Cross-functional collaboration</span><span class="chip">Team training &amp; supervision</span><span class="chip">Lean Six Sigma</span><span class="chip">Vendor management</span></div>
+      </article>
     </div>
-    <div class="skill-note rv">+ Python · Java · GA4 · Supply chain · Inventory · Negotiation · Leadership</div>
   </div>
 </section>
 
@@ -1035,14 +1135,17 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
       </article>
     </div>
     <div class="cert-cloud rv">
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lean Six Sigma White Belt</span>
-      <span class="cert prog"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Yellow Belt <small>· 60%</small></span>
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Negotiation <small>· UMichigan</small></span>
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Social Psychology <small>· Wesleyan</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Lean Six Sigma White Belt <small>· CSSC</small></span>
+      <span class="cert prog"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Lean Six Sigma Yellow Belt <small>· in progress</small></span>
       <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Google Analytics 4</span>
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Python Bootcamp <small>· Udemy</small></span>
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Java <small>· NIIT</small></span>
-      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Operating Systems <small>· NPTEL</small></span>
+      <span class="cert"><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Successful Negotiation <small>· University of Michigan</small></span>
+    </div>
+    <div class="cert-also rv" style="--d:.1s">
+      <span class="cert-also-k">Also studied</span>
+      <span class="cert minor">Python Bootcamp <small>· Udemy</small></span>
+      <span class="cert minor">Java <small>· NIIT</small></span>
+      <span class="cert minor">Operating Systems <small>· NPTEL</small></span>
+      <span class="cert minor">Social Psychology <small>· Wesleyan</small></span>
     </div>
   </div>
 </section>
@@ -1161,7 +1264,7 @@ html.lite .blob{filter:blur(48px)!important;opacity:.34!important;animation:none
     <div class="wrap footer-inner">
       <span class="f-name"><span class="brand-mark">KH</span>Kartik Hushare</span>
       <span class="f-time" id="dxbTime">Dubai —:—</span>
-      <span class="f-meta">Systems · Operations · © <span id="year"></span></span>
+      <span class="f-meta">Systems · AI Automation · Analytics · © <span id="year"></span></span>
     </div>
   </footer>
 </section>
@@ -1508,7 +1611,7 @@ $$('[data-flip]').forEach(function(t){
 /* ---------- Scramble roles ---------- */
 (function(){
   var el = $('#scramble'); if (!el || reduced) return;
-  var roles = ['BUSINESS PROCESS & SYSTEMS ANALYST','BUILDER OF BRIDGE — OKR & OPS WORKSPACE','FOUNDER OF EVARCA — SAAS','PROJECT MANAGER','ERP & AUTOMATION SPECIALIST','POWER BI DEVELOPER','OPERATIONS OPTIMISER','SUPPLY CHAIN PROBLEM-SOLVER'];
+  var roles = ['BUSINESS PROCESS & SYSTEMS ANALYST','AI AUTOMATION BUILDER','BUILDER OF BRIDGE — OKR & OPS WORKSPACE','ERP & POWER BI SPECIALIST','FOUNDER OF EVARCA — SAAS','AI-NATIVE SYSTEMS BUILDER','POWER BI · ADVANCED DAX DEVELOPER','OPERATIONS OPTIMISER'];
   var pool = '!<>-_/[]{}=+*^?#';
   var i = 0;
   function scrambleTo(txt){
@@ -1575,20 +1678,24 @@ var PROJECTS = {
     chips:['Built 0→1','100% audit trail','4+ modules linked','Power BI']},
   p3:{cat:'Data Analytics', title:'Dynamic COGS & Product-Level Costing', org:'BloomingBox LLC · Dec 2024 – Present',
     chal:'COGS was computed from P&L — useless when flower prices change daily and every product has its own recipe.',
-    sol:['Power BI engine costing materials per order, per item, per day.','ERP workflows redesigned with production for line-item consumption.','COGS segmented by product, supplier, date, hub — 6+ dimensions.','Planned vs actual variance analysis in advanced DAX.'],
-    chips:['COGS −2–3%','Product-level precision','Advanced DAX','6+ dimensions']},
+    sol:['Power BI engine costing materials per order, per item, per day.','ERP workflows redesigned with production for line-item consumption.','COGS segmented by product, supplier, date, hub — 6+ dimensions.','Planned vs actual variance analysis in advanced DAX — complex measures authored AI-assisted, then validated against the ledger.','Layered Power BI’s AI visuals on top — Key Influencers to surface what drives cost swings, and forecasting to see them coming.'],
+    chips:['COGS −2–3%','Product-level precision','Advanced DAX','AI visuals · forecasting','6+ dimensions']},
   p4:{cat:'Process Improvement', title:'Inventory Accuracy & Reconciliation System', org:'BloomingBox LLC · Nov 2024 – Jan 2025',
     chal:'Inaccurate stock, wrong deductions, 132+ weekly reconciliations, no purchase approvals, untracked wastage.',
     sol:['Redesigned the flow from receiving to consumption with checkpoints.','Automated stock deduction — manual errors eliminated.','Wastage + over-consumption tracking with variance reports.','Mandatory multi-level purchase approvals and smart entry validations.'],
     chips:['Accuracy 85–90%','132 → 30–35 recs','100% approvals','Wastage visible']},
   p5:{cat:'Flagship Platform · Built Solo', title:'Bridge — One Workspace for OKRs, Tasks & Internal Comms', org:'BloomingBox LLC · 2026 – Present',
     chal:'OKRs, task management and internal communication lived in three separate paid tools — three subscriptions, three logins, and none of them talked to each other.',
-    sol:['Designed and developed the entire platform alone — and had it live in about three months.','All three modules finished and in daily use: OKRs, task management and internal communication — one workspace for the whole team.','Replaced the three paid tools; licence costs cut and every update now lands in one place.','Still shipping — new features and upgrades released continuously.'],
-    chips:['3 tools → 1','Designed & built solo','All 3 modules live','Licence costs cut','Continuously upgraded']},
+    sol:['Designed and developed the entire platform alone — and had it live in about three months.','Built AI-assisted: Claude, ChatGPT, GitHub Copilot and Cursor as everyday dev tools — faster solo delivery without sacrificing quality (React, HTML/CSS/JS front end).','All three modules finished and in daily use: OKRs, task management and internal communication — one workspace for the whole team.','Replaced the three paid tools; licence costs cut and every update now lands in one place.','Still shipping — new features and upgrades released continuously.'],
+    chips:['3 tools → 1','Designed & built solo','AI-assisted build','All 3 modules live','Licence costs cut','Continuously upgraded']},
   p6:{cat:'ERP · New Build', title:'Bakery ERP, Built From Scratch for F&B', org:'BloomingBox LLC · Late 2025 – 2026',
     chal:'BloomingBox brought bakery in-house — and an ERP made for flowers and gifting cannot run food production. The bakery needed its own system, thought through from an F&B point of view.',
     sol:['Developed an entirely new ERP dedicated to the in-house bakery.','Designed from a food & beverage point of view — built around how a food operation works, not adapted from gifting or retail flows.','Another end-to-end build: design, development and rollout, owned by one person.'],
-    chips:['0→1 build','F&B-first design','In-house bakery','Built end-to-end']}
+    chips:['0→1 build','F&B-first design','In-house bakery','Built end-to-end']},
+  p7:{cat:'AI Automation · Operations', title:'AI-Driven Workflow Automation', org:'BloomingBox LLC · 2025 – Present',
+    chal:'Too much of daily operations ran on people re-doing the same manual steps — sorting, checking, chasing numbers, compiling reports. Slow, error-prone, and it did not scale with new business lines.',
+    sol:['Automated 6+ repetitive workflows end to end, wired directly into the ERP and paired with barcoding so data enters once and flows everywhere.','Auto-categorisation & smart routing — orders, tasks and inventory items classified and sent to the right queue without a human deciding.','Anomaly & error detection — AI logic flags inventory mismatches, pricing errors and unusual patterns before they hit the books.','AI-generated reporting — recurring reports and insight summaries produced automatically, so the team reads outcomes instead of building spreadsheets.','Net effect: processing time and human error cut across operations; the same headcount now runs more with less friction.'],
+    chips:['6+ workflows automated','Smart routing','Anomaly detection','AI-generated reports','Barcoding','Built into the ERP']}
 };
 var overlay = $('#overlay');
 var lockY = 0, lastFocus = null, openedAt = 0;
@@ -1681,8 +1788,8 @@ overlay.addEventListener('keydown', function(e){
 /* ---------- Clickable roles: details sheets ---------- */
 var ROLES = {
   r1:{cat:'Full-time · Nov 2024 — Present', title:'Business Process & Systems Analyst', org:'BloomingBox LLC · Dubai, UAE',
-    sol:['Own the company’s systems end to end — daily ERP operations, audits, backups, data integrity, security and compliance.','Designed & built Bridge alone: OKRs, task management and internal communication in one workspace, replacing three separate tools — still upgrading it.','Developed a brand-new ERP for the in-house bakery, from an F&B point of view.','The link between departments — aligning technical solutions with operational goals.','Directed collaborations with Mercedes and Netflix, preparing systems for strategic partnerships.','Spearheaded automation: AI-driven workflows, barcoding systems, process optimisation.','Built Power BI dashboards with advanced DAX for cost analysis and variance tracking.','Write the SOPs, user manuals and training that make new systems stick; manage vendors and dev teams for upgrades, integrations and custom reports.'],
-    chips:['Bridge: 3 tools → 1','Bakery ERP 0→1','10 min → <1 min completion','132 → 30–35 reconciliations','COGS −2–3%','Accounting module 0→1']},
+    sol:['Designed & built Bridge alone — OKRs, task management and internal communication in one workspace — live in ~3 months, replacing three paid tools. Built AI-assisted with Claude, ChatGPT, GitHub Copilot and Cursor; still shipping upgrades.','Developed a brand-new ERP for the in-house bakery, designed from an F&B point of view — powering BloomingBox’s entry into food.','Automated 6+ repetitive manual workflows with AI-driven logic — auto-categorisation & smart routing, anomaly/error detection, AI-generated reporting — plus barcoding; cut processing time and human error.','Redesigned the end-to-end order workflow: 10 minutes → under 1 minute. Engineered the inventory validation system: accuracy ~60% → 87%, weekly reconciliations 132 → ~32.','Built a product-level COGS engine in Power BI with AI-assisted advanced DAX across 6+ dimensions, layering Key Influencers and forecasting visuals — COGS down 2–3%.','Led the third-party ERP migration onto new AWS servers with zero downtime; designed and deployed a full accounting module with a 100% audit trail.','Built the operational and systems readiness behind BloomingBox’s strategic partnerships with Mercedes and Netflix.','Own the company’s systems end to end — daily ERP operations, audits, backups, data integrity, security, compliance — and write the SOPs, manuals and training that make new systems stick.'],
+    chips:['Bridge: 3 tools → 1','Bakery ERP 0→1','6+ AI workflows','10 min → <1 min completion','132 → ~32 reconciliations','COGS −2–3%','Accounting module 0→1','Mercedes & Netflix']},
   r2:{cat:'Full-time · Jan — Nov 2024', title:'Operational Supervisor', org:'Floward · Abu Dhabi & Al Ain, UAE',
     sol:['Managed 500+ daily order transactions across two cities.','Coordinated suppliers, customer service, inventory teams, drivers and florists.','Oversaw advance food ordering, verified order details, resolved complaints across channels.','Trained subordinates and gave continuous feedback to keep deliveries on time.','Created and analysed performance reports; implemented efficiency solutions.'],
     chips:['>97% on-time delivery','Complaints −7%','Wastage controlled','500+ daily orders']},
@@ -1940,7 +2047,7 @@ function finalizeName(){
     {sel:'#services .svc', mode:'alt'},
     {sel:'#experience .xp', mode:'left'},
     {sel:'#projects .proj', mode:'alt'},
-    {sel:'#skills .srow', mode:'alt'},
+    {sel:'#skills .skg', mode:'alt'},
     {sel:'#education .edu', mode:'alt'},
     {sel:'#education .cert', mode:'rand'},
     {sel:'#beyond .hob', mode:'rand'},
